@@ -64,6 +64,7 @@
     <Compile Include="TsAndCs.xaml.cs">
       <DependentUpon>TsAndCs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Visitors.cs" />
     <Page Include="CameraWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
