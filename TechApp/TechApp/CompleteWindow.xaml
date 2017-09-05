@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="CompleteWindow" Height="300" Width="300">
-    <Grid>
-        
+        Title="CompleteWindow" Height="720" Width="1280">
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid Margin="0,0,-8,0">
+        <TextBlock x:Name="TextBox1" HorizontalAlignment="Left" Height="226" Margin="88,25,0,0" TextWrapping="Wrap" Text="Thank you for completing." VerticalAlignment="Top" Width="686" FontSize="24"/>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="106" Margin="39,528,0,0" VerticalAlignment="Top" Width="543"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="1214,198,-34,0" VerticalAlignment="Top" Width="100"/>
+
     </Grid>
 </Window>
