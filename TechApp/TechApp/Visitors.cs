@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 
-namespace TechApp
-{
-    class Visitors
-    {
+namespace TechApp{
+    class Visitors{
         string firstname;
         string lastname;
         string phonenumber;
         string emailaddress;
         DateTime appointmenttime;
         int teacherid;
-
-        public void SetInformation(string FirstName, string LastName, string PhoneNumber, string EmailAddress, DateTime AppointmentTime, int TeacherID)
-        {
+        public void SetInformation(string FirstName, string LastName, string PhoneNumber, string EmailAddress, DateTime AppointmentTime, int TeacherID){
             firstname = FirstName;
             lastname = LastName;
             phonenumber = PhoneNumber;
@@ -26,11 +22,36 @@ namespace TechApp
             appointmenttime = AppointmentTime;
             teacherid = TeacherID;
         }
-
-        public void SubmitToDatabase()
-        {
+        public void SubmitToDatabase(){
             string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
             MySqlConnection cnn;
+            cnn = new MySqlConnection(connectionString);
+            try{
+                cnn.Open();
+                try{
+                    string query =
+                        "insert into tangible.tbltechVisitors(firstName,lastName,phoneNumber,emailAddress, appointmentTime, teacherID) values('" + this.firstname + "','" + this.lastname + "','" + this.phonenumber + "','" + this.emailaddress + "','" + this.appointmenttime + "','" + this.teacherid + "';";
+                    MySqlCommand MyCommand2 = new MySqlCommand(query, cnn);
+                    MySqlDataReader queryReader;
+                    cnn.Open();
+                    queryReader = MyCommand2.ExecuteReader();
+                    while (queryReader.Read()){
+
+                    }
+                    cnn.Close();
+                }
+                finally{
+                    cnn.Close();
+                }
+            }
+            finally{
+                cnn.Close();
+            }
+        }
+        public void RemoveFromDatabase(){
+            string connectionString;
+            MySqlConnection cnn;
+            connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
             cnn = new MySqlConnection(connectionString);
             try
             {
@@ -38,36 +59,24 @@ namespace TechApp
 
                 try
                 {
-                    string query =
-                        "insert into tangible.tbltechVisitors(firstName,lastName,phoneNumber,emailAddress, appointmentTime, teacherID) values('" + this.firstname + "','" + this.lastname + "','" + this.phonenumber + "','" + this.emailaddress + "','" + this.appointmenttime+ "','" + this.teacherid + "';";
+                    string query = "delete from tangible.tbltechVisitors where visitorID=MAX;";
+
                     MySqlCommand MyCommand2 = new MySqlCommand(query, cnn);
-                    MySqlDataReader queryReader;
+                    MySqlDataReader MyReader2;
                     cnn.Open();
-                    queryReader = MyCommand2.ExecuteReader();
-                    MessageBox.Show("Save Data");
-                    while (queryReader.Read())
+                    MyReader2 = MyCommand2.ExecuteReader();
+                    while (MyReader2.Read())
                     {
-
                     }
-
                     cnn.Close();
                 }
-                finally
-                {
+                finally{
                     cnn.Close();
                 }
-
-            }finally
-            {
+            }
+            finally{
                 cnn.Close();
             }
-
-
         }
-
-    }
-
-
-
-    
+    }    
 }
