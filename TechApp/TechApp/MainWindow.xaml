@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="720" Width="1280" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="BGImage.png"/>
+    </Window.Background>
     <Grid>
-        
+        <Image Margin="0,10,904,604" Source="Tech_LOGO.png" Stretch="Fill">
+            <Image.Effect>
+                <DropShadowEffect Opacity="0.2" BlurRadius="1"/>
+            </Image.Effect>
+        </Image>
+        <Button Margin="0,332,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="36" Content="TAKE PICTURE" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
+                    <GradientStop Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="0,230,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="36" Content="BOOKINGS" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
+                    <GradientStop Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
