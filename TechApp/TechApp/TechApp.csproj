@@ -110,5 +110,8 @@
   <ItemGroup>
     <Resource Include="BGImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tech_LOGO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

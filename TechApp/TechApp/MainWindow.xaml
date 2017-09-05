@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="1280" WindowStyle="None">
     <Window.Background>
         <ImageBrush ImageSource="BGImage.png"/>
     </Window.Background>
-    <Grid/>
+    <Grid>
+        <Image Margin="0,0,904,614" Source="Tech_LOGO.png" Stretch="Fill">
+            <Image.Effect>
+                <DropShadowEffect Color="#FF1D1D1D"/>
+            </Image.Effect>
+        </Image>
+    </Grid>
 </Window>
