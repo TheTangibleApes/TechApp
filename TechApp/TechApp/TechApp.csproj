@@ -155,5 +155,8 @@
   <ItemGroup>
     <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLs\WebCam_Capture.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
