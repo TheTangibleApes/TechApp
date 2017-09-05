@@ -22,6 +22,17 @@ namespace TechApp
         public SetUpAppointment()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+            
+            // Hide the MainWindow until later
+            this.Close();
         }
     }
 }
