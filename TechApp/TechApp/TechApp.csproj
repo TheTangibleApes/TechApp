@@ -134,5 +134,8 @@
   <ItemGroup>
     <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button-next.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
