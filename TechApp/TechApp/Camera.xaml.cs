@@ -49,5 +49,14 @@ namespace TechApp
         {
             Helper.SaveImageCapture((BitmapSource)imgVideo.Source);
         }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+            MainWindow HomeScreen = new MainWindow();
+            HomeScreen.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }
