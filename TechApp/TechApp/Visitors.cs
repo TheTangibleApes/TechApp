@@ -44,7 +44,7 @@ namespace TechApp
                     MySqlDataReader queryReader;
                     cnn.Open();
                     queryReader = MyCommand2.ExecuteReader();
-                    MessageBox.Show("Save Data");
+                    //MessageBox.Show("Save Data");
                     while (queryReader.Read())
                     {
 
