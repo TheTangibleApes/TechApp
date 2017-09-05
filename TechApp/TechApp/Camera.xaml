@@ -4,10 +4,7 @@
     Title="WPF C# WebCam" Height="720" Width="1280" Loaded="mainWindow_Loaded">
     <!-- Design by Jacob Lowry -->
     <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="White" Offset="0.916"/>
-            <GradientStop Color="White" Offset="0.145"/>
-        </LinearGradientBrush>
+        <ImageBrush ImageSource="BGImage.png"/>
     </Window.Background>
     <Grid Margin="0,0,45.5,0">
         <Grid.RowDefinitions>
