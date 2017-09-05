@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="720" Width="1280">
+    <Window.Background>
+        <ImageBrush ImageSource="BGImage.png"/>
+    </Window.Background>
     <Grid>
-        
+        <Button Margin="0,332,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="TAKE PICTURE" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
+                    <GradientStop Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="0,230,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="BOOKINGS" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
+                    <GradientStop Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image Margin="0,10,854,566" Source="Tech_LOGO.png" Stretch="Fill"/>
     </Grid>
 </Window>

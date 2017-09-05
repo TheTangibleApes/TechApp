@@ -1,0 +1,18 @@
+﻿<Window x:Class="TechApp.TsAndCs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TechApp"
+        mc:Ignorable="d"
+        Title="TsAndCs" Height="720" Width="1280">
+    <Window.Background>
+        <ImageBrush ImageSource="BGImage.png"/>
+    </Window.Background>
+    <Grid>
+        <Label x:Name="label" Content="Techtorium" HorizontalAlignment="Left" Margin="398,0,0,0" VerticalAlignment="Top" FontSize="72"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="400" Margin="346,111,0,0" VerticalAlignment="Top" Width="500"/>
+        <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="374,545,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
