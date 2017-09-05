@@ -40,5 +40,14 @@ namespace TechApp
         {
             System.Windows.Application.Current.Shutdown();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Camera CameraSystem = new Camera();
+            CameraSystem.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
     }
 }

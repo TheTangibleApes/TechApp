@@ -23,10 +23,9 @@ namespace TechApp
         public Camera()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
         }
-
-
-        /////////
 
         private void mainWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
