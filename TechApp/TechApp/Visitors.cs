@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
 
 namespace TechApp
 {
@@ -28,7 +30,20 @@ namespace TechApp
         public void SubmitToDatabase()
         {
             string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
-            
+            MySqlConnection cnn;
+            cnn = new MySqlConnection(connectionString);
+            try
+            {
+                cnn.Open();
+
+                try
+                {
+
+                }
+
+            }
+
+
         }
 
     }
