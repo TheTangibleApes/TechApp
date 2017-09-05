@@ -29,26 +29,8 @@ namespace TechApp
 
         public void SubmitToDatabase()
         {
-            string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
-            MySqlConnection cnn;
-            cnn = new MySqlConnection(connectionString);
-            try
-            {
-                cnn.Open();
-
-                try
-                {
-
-                }
-
-            }
-
 
         }
 
     }
-
-
-
-    
 }
