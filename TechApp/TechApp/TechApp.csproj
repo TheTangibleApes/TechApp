@@ -57,6 +57,7 @@
     <Compile Include="SetUpAppointment.xaml.cs">
       <DependentUpon>SetUpAppointment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Signature Page.xaml.cs" />
     <Compile Include="SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
@@ -92,6 +93,10 @@
     <Page Include="SetUpAppointment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Signature Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
