@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="BGImage.png"/>
     </Window.Background>
     <Grid>
-        <Button Margin="0,332,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="36" Content="TAKE PICTURE" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1">
+        <Button Margin="0,332,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="TAKE PICTURE" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="#9900FF0C" Offset="0.694"/>
@@ -18,7 +18,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Margin="0,230,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="36" Content="BOOKINGS" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1">
+        <Button Margin="0,230,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="BOOKINGS" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="#9900FF0C" Offset="0.694"/>
