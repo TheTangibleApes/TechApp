@@ -23,5 +23,29 @@ namespace TechApp
         {
             InitializeComponent();
         }
+
+        WebCam webcam;
+        private void mainWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            webcam = new WebCam();
+            webcam.InitializeWebCam(ref imgVideo);
+            webcam.Start();
+        }
+
+        private void bntContinue_Click(object sender, RoutedEventArgs e)
+        {
+            webcam.Start();
+        }
+
+        private void bntCapture_Click(object sender, RoutedEventArgs e)
+        {
+            webcam.Stop();
+        }
+
+        private void bntSaveImage_Click(object sender, RoutedEventArgs e)
+        {
+            Helper.SaveImageCapture((BitmapSource)imgVideo.Source);
+        }
     }
 }
