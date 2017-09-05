@@ -9,14 +9,17 @@
     <Grid>
         <Label x:Name="label" Content="Techtorium" HorizontalAlignment="Left" Margin="438,10,0,0" VerticalAlignment="Top" FontSize="72"/>
         <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="106,151,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="110,241,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="106,231,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="110,335,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label x:Name="label4" Content="Email:" HorizontalAlignment="Left" Margin="110,425,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Left" Margin="110,523,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="554,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="554,259,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="554,353,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="554,443,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="580,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="580,249,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="580,339,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="580,443,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="580,541,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="1042,629,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="24"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="132,629,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="24"/>
 
     </Grid>
 </Window>

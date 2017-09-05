@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="TsAndCs" Height="720" Width="1280">
     <Grid>
-        
+        <Label x:Name="label" Content="Techtorium" HorizontalAlignment="Left" Margin="524,10,0,0" VerticalAlignment="Top" FontSize="72"/>
+
     </Grid>
 </Window>
