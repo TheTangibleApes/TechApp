@@ -137,13 +137,13 @@
     <Resource Include="BGImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Tech_LOGO.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="button-next.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="button-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
