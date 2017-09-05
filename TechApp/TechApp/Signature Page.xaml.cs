@@ -53,7 +53,7 @@ namespace Techapp
 
                 downPoint = new Point();
 
-                downPoint = e.GetPosition(this.canvas1);
+                downPoint = e.GetPosition(this.canvasSignature);
 
             }
         }
