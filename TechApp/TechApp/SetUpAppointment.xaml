@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="SetUpAppointment" Height="720" Width="1280">
+        Title="SetUpAppointment" Height="720" Width="1280" Foreground="#FFFFF9F9">
+    <Window.Background>
+        <ImageBrush ImageSource="BGImage.png"/>
+    </Window.Background>
     <Grid>
         <Label x:Name="label" Content="Techtorium" HorizontalAlignment="Left" Margin="398,29,0,0" VerticalAlignment="Top" FontSize="72"/>
         <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Left" Margin="218,135,0,0" VerticalAlignment="Top" FontSize="36"/>

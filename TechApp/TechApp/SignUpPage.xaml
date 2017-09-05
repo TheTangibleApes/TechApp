@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
         Title="SignUpPage" Height="720" Width="1280">
+    <Window.Background>
+        <ImageBrush ImageSource="BGImage.png"/>
+    </Window.Background>
     <Grid>
-        <Label x:Name="label" Content="Techtorium" HorizontalAlignment="Left" Margin="438,10,0,0" VerticalAlignment="Top" FontSize="72"/>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Label x:Name="label" Content="Techtorium" HorizontalAlignment="Left" Margin="438,10,0,0" VerticalAlignment="Top" FontSize="72" Foreground="White"/>
         <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="106,151,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="106,231,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="110,335,0,0" VerticalAlignment="Top" FontSize="36"/>
@@ -18,7 +24,11 @@
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="580,339,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="580,443,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="580,541,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="1042,629,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="24"/>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="1042,629,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="24" BorderBrush="#FF7C7272">
+            <Button.Background>
+                <ImageBrush ImageSource="button-next.png"/>
+            </Button.Background>
+        </Button>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="132,629,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="24"/>
 
     </Grid>
