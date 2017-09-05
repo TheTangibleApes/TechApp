@@ -64,10 +64,6 @@
     <Compile Include="TsAndCs.xaml.cs">
       <DependentUpon>TsAndCs.xaml</DependentUpon>
     </Compile>
-    <Page Include="CameraWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="CompleteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,9 +75,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CameraWindow.xaml.cs">
-      <DependentUpon>CameraWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="CompleteWindow.xaml.cs">
       <DependentUpon>CompleteWindow.xaml</DependentUpon>
