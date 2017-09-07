@@ -18,7 +18,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252" Background="White"/>
+        <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252"/>
 
     </Grid>
 </Window>
