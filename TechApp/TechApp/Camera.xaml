@@ -26,7 +26,7 @@
         <Button x:Name="bntContinue" Content="Recapture" Background="#34000000"  Margin="10,5,10,100" Click="bntContinue_Click" FontSize="50" Grid.Column="4" Grid.Row="4" BorderBrush="#00707070" Foreground="White" FontWeight="Light" />
         <Image x:Name="imgVideo" Stretch="Fill"   Grid.ColumnSpan="4" Grid.Column="1" Margin="249.5,30,287,6"  Grid.RowSpan="4"   />
         <Button x:Name="bntCapture" Content="Capture Image" Background="#33000000" Click="bntCapture_Click" Margin="47,5,10,100" FontSize="50" Grid.Row="4" Grid.ColumnSpan="2" Foreground="White" BorderBrush="#00707070" FontWeight="Light" />
-        <Button Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="10,122,0,0" Grid.Row="4" VerticalAlignment="Top" Width="283" Height="70" Click="Return">
+        <Button Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="63,122,0,0" Grid.Row="4" VerticalAlignment="Top" Width="283" Height="70" Click="Return" Grid.ColumnSpan="2">
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>

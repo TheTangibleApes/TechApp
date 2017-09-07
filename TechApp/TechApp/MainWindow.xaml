@@ -18,7 +18,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="460" Margin="519,119,0,0" VerticalAlignment="Top" Width="720"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="10,310,0,0" VerticalAlignment="Top" Width="84" Source="Tap-icon.png"/>
+        <Image HorizontalAlignment="Left" Height="460" Margin="519,119,0,0" VerticalAlignment="Top" Width="720"/>
     </Grid>
 </Window>
