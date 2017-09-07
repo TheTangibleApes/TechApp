@@ -49,11 +49,17 @@
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="734,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="734,502,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" Height="100" FontSize="24" BorderBrush="#FF7C7272" Click="button_Click" BorderThickness="0">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" FontSize="24" Click="button1_Click" BorderThickness="0">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="button-previous.png"/>
             </Button.Background>
