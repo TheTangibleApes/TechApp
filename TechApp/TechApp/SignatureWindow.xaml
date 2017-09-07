@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="BGImage.png"/>
     </Window.Background>
     <Grid>
-        <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Left" Margin="301,497,0,0" VerticalAlignment="Top" Width="587" Click="buttonSubmit_Click" Height="180">
+        <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Left" Margin="412,534,0,0" VerticalAlignment="Top" Width="389" Click="buttonSubmit_Click" Height="119">
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>
@@ -18,7 +18,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252"/>
+        <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252" Background="White"/>
 
     </Grid>
 </Window>
