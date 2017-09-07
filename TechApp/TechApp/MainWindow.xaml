@@ -10,15 +10,7 @@
         <ImageBrush ImageSource="BGImage.png"/>
     </Window.Background>
     <Grid>
-        <Button Margin="0,332,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="TAKE PICTURE" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic" Click="Button_Click_1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
-                    <GradientStop Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Margin="0,230,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="BOOKINGS" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic" Click="Button_Click">
+        <Button Margin="0,286,705,0" VerticalAlignment="Top" Height="124" BorderBrush="#00707070" FontSize="48" Content="START" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic" Click="Button_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="#9900FF0C" Offset="0.694"/>
@@ -27,13 +19,5 @@
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="379" Source="Tech_LOGO.png"/>
-        <Button Margin="0,434,807,0" VerticalAlignment="Top" Height="102" BorderBrush="#00707070" FontSize="48" Content="CLOSE" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic" Click="Close">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
-                    <GradientStop Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
     </Grid>
 </Window>
