@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TsAndCs" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="BGImage.png"/>
+        <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
         <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="72" Width="400" Height="100">
@@ -18,12 +18,12 @@
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="415" Margin="382,115,0,0" VerticalAlignment="Top" Width="505"/>
         <CheckBox x:Name="checkBox" Content="Yes" HorizontalAlignment="Left" Margin="460,609,0,0" VerticalAlignment="Top" FontSize="36" Width="101" Foreground="#FF0F0D0D" FontWeight="Bold"/>
         <CheckBox x:Name="checkBox1" Content="No" HorizontalAlignment="Left" Margin="712,600,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF0A0A0A" Background="White"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="button-previous.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" Height="100">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" Height="100" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>

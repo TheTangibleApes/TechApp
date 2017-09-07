@@ -62,7 +62,11 @@ namespace TechApp
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
+            CompleteWindow CW = new CompleteWindow();
+            CW.Show();
 
+            // Hide the MainWindow until later
+            this.Close();
         }
 
         private void canvasSignature_MouseMove(object sender, MouseEventArgs e)

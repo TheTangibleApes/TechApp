@@ -50,8 +50,8 @@ namespace TechApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Camera CameraSystem = new Camera();
-            CameraSystem.Show();
+            TsAndCs TS = new TsAndCs();
+            TS.Show();
 
             // Hide the MainWindow until later
             this.Close();

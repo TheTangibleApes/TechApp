@@ -32,7 +32,15 @@ namespace TechApp
             // TODO: Add event handler implementation here.
             webcam = new WebCam();
             webcam.InitializeWebCam(ref imgVideo);
-            webcam.Start();
+            if (webcam == null)
+            {
+                SignatureWindow Signature = new SignatureWindow();
+                Signature.Show();
+
+                // Hide the MainWindow until later
+                this.Close();
+            }
+            else webcam.Start();
         }
 
         private void bntContinue_Click(object sender, RoutedEventArgs e)

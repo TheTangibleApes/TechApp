@@ -23,5 +23,14 @@ namespace TechApp
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow HomeScreen = new MainWindow();
+            HomeScreen.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }

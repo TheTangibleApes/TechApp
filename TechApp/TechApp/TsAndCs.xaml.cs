@@ -23,5 +23,23 @@ namespace TechApp
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            SetUpAppointment Appt2 = new SetUpAppointment();
+            Appt2.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Camera CameraSystem = new Camera();
+            CameraSystem.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }
