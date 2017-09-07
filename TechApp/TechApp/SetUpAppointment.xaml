@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="BGImage.png"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="72" Width="400" Height="100">
+        <Label x:Name="label" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="72" Width="400" Height="100">
             <Label.Background>
                 <ImageBrush ImageSource="Tech_LOGO.png"/>
             </Label.Background>
