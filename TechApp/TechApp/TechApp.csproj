@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DLLs\WebCam_Capture.dll" />
+    <Resource Include="Tap-icon.png" />
     <Resource Include="NewBG.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
