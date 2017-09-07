@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
-        <Button Margin="0,286,705,0" VerticalAlignment="Top" Height="124" BorderBrush="#00707070" FontSize="48" Content="START" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic" Click="Button_Click">
+        <Button Margin="0,286,597,0" VerticalAlignment="Top" Height="124" BorderBrush="#00707070" FontSize="48" Content="TAP HERE TO START" Foreground="#FFE8E8E8" HorizontalContentAlignment="Left" Padding="100,1,1,1" Click="Button_Click" FontWeight="Light">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="#99171717" Offset="0.694"/>
@@ -19,5 +19,6 @@
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="460" Margin="519,119,0,0" VerticalAlignment="Top" Width="720"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="10,310,0,0" VerticalAlignment="Top" Width="84" Source="Tap-icon.png"/>
     </Grid>
 </Window>
