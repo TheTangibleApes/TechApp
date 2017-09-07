@@ -45,9 +45,19 @@ namespace TechApp
             webcam.Stop();
         }
 
+        private JpegBitmapEncoder GetCameraImageAsJPEG(BitmapSource SourceImage)
+        {
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(SourceImage));
+            encoder.QualityLevel = 100;
+
+            return encoder;
+        }
+
         private void bntSaveImage_Click(object sender, RoutedEventArgs e)
         {
-            Helper.SaveImageCapture((BitmapSource)imgVideo.Source);
+            // what the fuck is this allen Visitors AA = new Visitors();
+            // AA.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
         }
 
         private void Return(object sender, RoutedEventArgs e)
