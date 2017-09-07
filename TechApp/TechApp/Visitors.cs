@@ -59,7 +59,7 @@ namespace TechApp{
 
                 try
                 {
-                    string query = "delete from tangible.tbltechVisitors where visitorID=MAX;";
+                    string query = "delete from tangible.tbltechVisitors where visitorID=(SELECT max(id) FROM table);";
 
                     MySqlCommand MyCommand2 = new MySqlCommand(query, cnn);
                     MySqlDataReader MyReader2;
