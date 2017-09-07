@@ -22,6 +22,8 @@ namespace TechApp
         public CompleteWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
