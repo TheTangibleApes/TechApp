@@ -7,17 +7,12 @@
         mc:Ignorable="d"
         Title="SignUpPage" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="BGImage.png"/>
+        <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="72" Foreground="White" Width="362" Height="100">
-            <Label.Background>
-                <ImageBrush ImageSource="Tech_LOGO.png"/>
-            </Label.Background>
-        </Label>
         <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="264,129,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="60" Width="205">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>

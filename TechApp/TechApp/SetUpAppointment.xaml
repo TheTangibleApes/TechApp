@@ -7,14 +7,9 @@
         mc:Ignorable="d"
         Title="SetUpAppointment" Height="720" Width="1280" Foreground="#FFFFF9F9">
     <Window.Background>
-        <ImageBrush ImageSource="BGImage.png"/>
+        <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="72" Width="400" Height="100">
-            <Label.Background>
-                <ImageBrush ImageSource="Tech_LOGO.png"/>
-            </Label.Background>
-        </Label>
         <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Left" Margin="216,115,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>

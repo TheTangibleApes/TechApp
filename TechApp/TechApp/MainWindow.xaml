@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="BGImage.png"/>
+        <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
         <Button Margin="0,286,705,0" VerticalAlignment="Top" Height="124" BorderBrush="#00707070" FontSize="48" Content="START" Foreground="White" HorizontalContentAlignment="Left" Padding="20,1,1,1" FontStyle="Italic" Click="Button_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                    <GradientStop Color="#9900FF0C" Offset="0.694"/>
-                    <GradientStop Offset="1"/>
+                    <GradientStop Color="#99171717" Offset="0.694"/>
+                    <GradientStop Offset="1" Color="#00000000"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="379" Source="Tech_LOGO.png"/>
+        <Image HorizontalAlignment="Left" Height="460" Margin="519,119,0,0" VerticalAlignment="Top" Width="720"/>
     </Grid>
 </Window>
