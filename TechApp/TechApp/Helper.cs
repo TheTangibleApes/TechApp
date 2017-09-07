@@ -28,8 +28,8 @@ namespace TechApp
             DeleteObject(ip);
 
             return bs;
-
         }
+        
         public static void SaveImageCapture(BitmapSource bitmap)
         {
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
