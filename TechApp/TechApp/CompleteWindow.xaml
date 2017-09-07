@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CompleteWindow" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="BGImage.png"/>
+        <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid Margin="0,0,-8,0">
         <Grid.ColumnDefinitions>
