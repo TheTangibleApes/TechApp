@@ -23,7 +23,7 @@
                 <ImageBrush ImageSource="button-previous.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" FontSize="24" Height="100" BorderThickness="0">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" FontSize="24" Height="100" BorderThickness="0" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>

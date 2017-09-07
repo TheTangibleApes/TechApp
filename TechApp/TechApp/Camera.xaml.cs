@@ -52,8 +52,8 @@ namespace TechApp
 
         private void Return(object sender, RoutedEventArgs e)
         {
-            MainWindow HomeScreen = new MainWindow();
-            HomeScreen.Show();
+            SignatureWindow Signature = new SignatureWindow();
+            Signature.Show();
 
             // Hide the MainWindow until later
             this.Close();
