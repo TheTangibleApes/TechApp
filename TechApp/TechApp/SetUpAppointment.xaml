@@ -15,7 +15,7 @@
                 <ImageBrush ImageSource="Tech_LOGO.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Left" Margin="216,115,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Left" Margin="216,115,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="386,195,0,0" VerticalAlignment="Top" Width="450" Height="60" IsReadOnly="True"/>
         <DatePicker HorizontalAlignment="Left" Margin="386,413,0,0" VerticalAlignment="Top" Width="450" Height="60" FontSize="36"/>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" FontSize="24" Click="button_Click" BorderThickness="0">

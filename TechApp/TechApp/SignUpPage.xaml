@@ -18,11 +18,11 @@
                 <ImageBrush ImageSource="Tech_LOGO.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="264,129,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.69,0.207" Height="60" Width="205"/>
-        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="264,221,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="White" Height="60" Width="200"/>
-        <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="264,317,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" FontWeight="Bold" Height="60" Width="146"/>
-        <Label x:Name="label4" Content="Email:" HorizontalAlignment="Left" Margin="264,411,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" FontWeight="Bold" Height="60" Width="118"/>
-        <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Left" Margin="264,502,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="White" Height="60"/>
+        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="264,129,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="60" Width="205"/>
+        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="264,221,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="200"/>
+        <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="264,317,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="146"/>
+        <Label x:Name="label4" Content="Email:" HorizontalAlignment="Left" Margin="264,411,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="118"/>
+        <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Left" Margin="264,502,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="734,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="734,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="734,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
