@@ -15,7 +15,10 @@
             <ColumnDefinition Width="127*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="TextBox1" HorizontalAlignment="Left" Height="112" Margin="62,219,0,0" TextWrapping="Wrap" Text="Thank you for completing." VerticalAlignment="Top" Width="1065" FontSize="72" Foreground="White" FontStyle="Italic"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="77" Margin="62,521,0,0" VerticalAlignment="Top" Width="302" BorderBrush="#00707070" Click="button_Click_1">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="100" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" BorderBrush="#00707070" Click="button_Click_1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>
