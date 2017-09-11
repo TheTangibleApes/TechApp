@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" Icon="Tap-icon.png">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
-        <Button Margin="0,286,597,0" Height="124" BorderBrush="#00707070" FontSize="48" Content="TAP HERE TO START" Foreground="#FFE8E8E8" HorizontalContentAlignment="Stretch" Padding="100,1,1,1" Click="Button_Click" FontWeight="Light" VerticalContentAlignment="Top" VerticalAlignment="Top">
+        <Button Margin="0,286,597,0" Height="124" BorderBrush="#00707070" FontSize="48" Content="TAP HERE TO START" Foreground="#FFE8E8E8" HorizontalContentAlignment="Stretch" Padding="100,1,1,1" Click="Button_Click" FontWeight="Light" VerticalContentAlignment="Center" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                    <GradientStop Color="#99171717" Offset="0.694"/>
+                    <GradientStop Color="#99171717" Offset="0.716"/>
                     <GradientStop Color="#00000000" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>

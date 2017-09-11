@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SignatureWindow" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
         <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="389" Click="buttonSubmit_Click" Height="119">

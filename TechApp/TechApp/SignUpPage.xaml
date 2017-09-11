@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SignUpPage" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>

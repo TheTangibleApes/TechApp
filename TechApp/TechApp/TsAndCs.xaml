@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TsAndCs" Height="720" Width="1280" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
         <ListBox x:Name="listBox" Height="452" Margin="10,10,0,0" Width="1252" Background="#CC3A3A3A" Foreground="White" SelectionChanged="listBox_SelectionChanged" BorderBrush="#00ABADB3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" VerticalAlignment="Top"/>

@@ -4,7 +4,7 @@
     Title="WPF C# WebCam" Height="720" Width="1280" Loaded="mainWindow_Loaded">
     <!-- Design by Jacob Lowry -->
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid Margin="0,0,2,0">
         <Grid.RowDefinitions>
