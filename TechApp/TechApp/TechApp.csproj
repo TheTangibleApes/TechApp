@@ -155,15 +155,11 @@
     <Resource Include="BGImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="button-next.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="button-previous.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="button-next.png" />
+    <Resource Include="button-previous.png" />
     <Content Include="DLLs\WebCam_Capture.dll" />
     <Resource Include="Tap-icon.png" />
     <Resource Include="NewBG.jpg" />

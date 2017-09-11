@@ -10,28 +10,28 @@
         <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="415" Margin="382,115,0,0" VerticalAlignment="Top" Width="505" Background="#CC3A3A3A" Foreground="White" SelectionChanged="listBox_SelectionChanged" BorderBrush="#00ABADB3"/>
-        <CheckBox x:Name="checkBox" Content="Yes" HorizontalAlignment="Left" Margin="460,609,0,0" VerticalAlignment="Top" FontSize="36" Width="101" Foreground="White">
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="452" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252" Background="#CC3A3A3A" Foreground="White" SelectionChanged="listBox_SelectionChanged" BorderBrush="#00ABADB3"/>
+        <CheckBox x:Name="checkBox" Content="Yes" HorizontalAlignment="Left" Margin="476,541,0,0" VerticalAlignment="Top" FontSize="36" Width="101" Foreground="#FF00FF2E">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </CheckBox.Effect>
         </CheckBox>
-        <CheckBox x:Name="checkBox1" Content="No" HorizontalAlignment="Left" Margin="713,609,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Background="White">
+        <CheckBox x:Name="checkBox1" Content="No" HorizontalAlignment="Left" Margin="729,541,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFFF3434" Background="White">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </CheckBox.Effect>
         </CheckBox>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" Click="button_Click">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" Click="button_Click" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="button-previous.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" Height="100" Click="button1_Click">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" Height="100" Click="button1_Click" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="label1" Content="Do you agree to these terms?" HorizontalAlignment="Left" Margin="382,535,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White">
+        <Label x:Name="label1" Content="Do you agree to these terms?" HorizontalAlignment="Left" Margin="398,467,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
