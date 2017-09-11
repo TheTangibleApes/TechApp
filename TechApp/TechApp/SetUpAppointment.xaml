@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SetUpAppointment" Height="720" Width="1280" Foreground="#FFFFF9F9">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
         <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Center" Margin="237,184,258,447" VerticalAlignment="Center" FontSize="36" Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
