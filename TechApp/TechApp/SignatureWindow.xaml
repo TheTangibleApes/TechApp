@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
     <Grid>
-        <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Left" Margin="873,560,0,0" VerticalAlignment="Top" Width="389" Click="buttonSubmit_Click" Height="119">
+        <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="389" Click="buttonSubmit_Click" Height="119">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -22,7 +22,7 @@
             </Button.BorderBrush>
         </Button>
         <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="0,560,0,0" VerticalAlignment="Top" Width="389" Height="119" BorderThickness="0" Click="button_Click">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Height="100" BorderThickness="0" Click="button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
