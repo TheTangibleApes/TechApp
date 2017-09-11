@@ -79,8 +79,8 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            SetUpAppointment SignUp = new SetUpAppointment();
-            SignUp.Show();
+            TsAndCs TandC = new TsAndCs();
+            TandC.Show();
 
             // Hide the MainWindow until later
             this.Close();
