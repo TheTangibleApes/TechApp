@@ -43,5 +43,10 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

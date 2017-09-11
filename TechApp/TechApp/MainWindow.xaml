@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="1280" Icon="Tap-icon.png">
     <Window.Background>
         <ImageBrush ImageSource="NewBG.jpg"/>
     </Window.Background>
