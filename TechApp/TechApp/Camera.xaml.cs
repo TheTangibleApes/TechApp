@@ -76,5 +76,14 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            SetUpAppointment SignUp = new SetUpAppointment();
+            SignUp.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }
