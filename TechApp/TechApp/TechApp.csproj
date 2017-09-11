@@ -158,7 +158,7 @@
     <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="NewBG.jpg" />
+    <Resource Include="NewBG.png" />
     <Resource Include="button-next.png" />
     <Resource Include="button-previous.png" />
     <Content Include="DLLs\WebCam_Capture.dll" />
