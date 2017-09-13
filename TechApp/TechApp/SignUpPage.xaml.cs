@@ -37,11 +37,22 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
             SetUpAppointment Apt2 = new SetUpAppointment();
             Apt2.Show();
 
             // Hide the MainWindow until later
             this.Close();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

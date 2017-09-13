@@ -42,8 +42,8 @@
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="730,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="730,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="730,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="730,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" TextChanged="textBox1_TextChanged"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="730,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="730,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="730,506,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>

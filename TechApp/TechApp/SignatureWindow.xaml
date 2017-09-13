@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
-        <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="389" Click="buttonSubmit_Click" Height="119">
+        <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Click="buttonSubmit_Click" Height="100">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
