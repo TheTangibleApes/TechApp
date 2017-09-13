@@ -85,5 +85,14 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            TsAndCs TandC = new TsAndCs();
+            TandC.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }

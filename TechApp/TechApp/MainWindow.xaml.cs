@@ -10,8 +10,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace TechApp
 {
@@ -48,6 +54,29 @@ namespace TechApp
 
             // Hide the MainWindow until later
             this.Hide();
+        }
+
+        private void Clicked(object sender, TouchEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void Tapped(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void Test(object sender, RoutedEventArgs e)
+        {
+            Process.Start("osk.exe");
         }
     }
 }
