@@ -16,6 +16,7 @@ namespace TechApp
         public static extern bool DeleteObject(IntPtr handle);
         public static BitmapSource bs;
         public static IntPtr ip;
+
         public static BitmapSource LoadBitmap(System.Drawing.Bitmap source)
         {
 
