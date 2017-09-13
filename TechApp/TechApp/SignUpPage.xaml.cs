@@ -11,6 +11,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace TechApp
 {
@@ -42,6 +49,11 @@ namespace TechApp
 
             // Hide the MainWindow until later
             this.Close();
+        }
+
+        private void Keyboard(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start("osk.exe");
         }
     }
 }
