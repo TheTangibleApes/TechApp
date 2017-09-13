@@ -10,7 +10,11 @@
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
-        <Image HorizontalAlignment="Center" Height="100" Margin="396,361,423,228" VerticalAlignment="Center" Width="453" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped"/>
+        <Image HorizontalAlignment="Center" Height="100" Margin="396,361,423,228" VerticalAlignment="Center" Width="400" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
         <Label Content="TAP TO START:" HorizontalAlignment="Center" Margin="396,255,400,333" VerticalAlignment="Center" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="72" Height="101" Width="476" FontWeight="ExtraLight">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
