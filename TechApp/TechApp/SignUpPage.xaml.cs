@@ -31,7 +31,7 @@ namespace TechApp
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-            Process.Start("osk.exe");
+         
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
