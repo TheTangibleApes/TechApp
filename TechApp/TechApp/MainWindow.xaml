@@ -16,7 +16,6 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="167,150,0,0" VerticalAlignment="Top" Width="176" Height="99" Click="Test"/>
     </Grid>
 </Window>
     
