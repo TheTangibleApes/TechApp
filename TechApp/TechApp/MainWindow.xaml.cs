@@ -49,5 +49,23 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Hide();
         }
+
+        private void Clicked(object sender, TouchEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void Tapped(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
     }
 }
