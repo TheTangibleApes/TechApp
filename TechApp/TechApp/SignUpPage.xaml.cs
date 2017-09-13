@@ -11,13 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Diagnostics;
-using System.IO;
-using System.Runtime.InteropServices;
 
 namespace TechApp
 {
@@ -44,6 +37,7 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
             SetUpAppointment Apt2 = new SetUpAppointment();
             Apt2.Show();
 
@@ -51,9 +45,14 @@ namespace TechApp
             this.Close();
         }
 
-        private void Keyboard(object sender, MouseButtonEventArgs e)
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Process.Start("osk.exe");
+            
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
