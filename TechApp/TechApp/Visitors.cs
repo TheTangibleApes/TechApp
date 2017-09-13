@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Media.Imaging;
+using System.IO;
 
-
-namespace TechApp{
-    public class Visitors{
+namespace TechApp
+{
+    public class Visitors
+    {
         string firstname;
         string lastname;
         string phonenumber;
@@ -23,7 +25,8 @@ namespace TechApp{
             staffid = -1;
         }
 
-        public void SetInformation(string FirstName, string LastName, string PhoneNumber, string EmailAddress, DateTime AppointmentTime, int StaffID){
+        public void SetInformation(string FirstName, string LastName, string PhoneNumber, string EmailAddress, DateTime AppointmentTime, int StaffID)
+        {
             firstname = FirstName;
             lastname = LastName;
             phonenumber = PhoneNumber;
@@ -34,6 +37,11 @@ namespace TechApp{
 
         public void SubmitToDatabase()
         {
+            ConvertImageToByteArray();
+
+
+            
+
             if (staffid >= 0)
             {
                 string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
@@ -45,15 +53,17 @@ namespace TechApp{
                     try
                     {
                         string query =
-                            "insert into tangible.tbltechVisitors(firstName,lastName,phoneNumber,emailAddress, appointmentTime, teacherID) values('" + this.firstname + "','" + this.lastname + "','" + this.phonenumber + "','" + this.emailaddress + "','" + this.appointmenttime + "','" + this.staffid + "';";
-                        MySqlCommand MyCommand2 = new MySqlCommand(query, cnn);
-                        MySqlDataReader queryReader;
-                        cnn.Open();
-                        queryReader = MyCommand2.ExecuteReader();
-                        while (queryReader.Read())
-                        {
+                            "insert into tangible.tbltechVisitors(firstName,lastName,phoneNumber,emailAddress, appointmentTime, teacherID) values('" + 
+                                this.firstname + "','" + 
+                                this.lastname + "','" + 
+                                this.phonenumber + "','" + 
+                                this.emailaddress + "','" + 
+                                this.appointmenttime + "','" + 
+                                this.staffid + "';";
 
-                        }
+                        MySqlCommand MyCommand2 = new MySqlCommand(query, cnn);
+                        MyCommand2.ExecuteNonQuery();
+
                         cnn.Close();
                     }
                     finally
@@ -72,15 +82,30 @@ namespace TechApp{
                 throw new System.Exception("Not implimented");
             }
         }
-        
-
-        //public Boolean SubmitImageToDatabase()
-        //{
-
-        //}
 
 
-        public void RemoveFromDatabase(int ID){
+        private byte[] ConvertImageToByteArray()
+        {
+            byte[] Ret;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms);
+                Ret = ms.ToArray();
+            }
+            return Ret;
+        }
+
+
+        public Boolean SubmitImageToDatabase()
+        {
+            ConvertImageToByteArray();
+            return true;
+        }
+
+
+        public void RemoveFromDatabase(int ID)
+        {
             string connectionString;
             MySqlConnection cnn;
             connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
@@ -102,13 +127,15 @@ namespace TechApp{
                     }
                     cnn.Close();
                 }
-                finally{
+                finally
+                {
                     cnn.Close();
                 }
             }
-            finally{
+            finally
+            {
                 cnn.Close();
             }
         }
-    }    
+    }
 }

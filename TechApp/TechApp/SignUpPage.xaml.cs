@@ -22,8 +22,10 @@ namespace TechApp
         public SignUpPage()
         {
             InitializeComponent();
+            MessageBox.Show("Init done");
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            MessageBox.Show("sizing done");
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
