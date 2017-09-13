@@ -62,5 +62,41 @@ namespace TechApp
         {
 
         }
+
+        private void Clicked(object sender, TouchEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void Tapped(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void next_screen(object sender, MouseButtonEventArgs e)
+        {
+            SetUpAppointment Apt1 = new SetUpAppointment();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void prev_page(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow Apt1 = new MainWindow();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
     }
 }

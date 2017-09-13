@@ -47,22 +47,16 @@
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="730,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="730,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
         <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="730,506,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <Button x:Name="button" Content="" Margin="0,0,10,10" Width="400" Height="100" FontSize="24" BorderBrush="#FF7C7272" Click="button_Click" BorderThickness="0" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-            <Button.Effect>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="872,589,0,0" VerticalAlignment="Top" Width="400" Source="button-next.png" MouseDown="next_screen">
+            <Image.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-next.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button1" Content="" Width="400" Height="100" FontSize="24" Click="button1_Click" BorderThickness="0" Margin="10,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Button.Effect>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="10,589,0,0" VerticalAlignment="Top" Width="400" Source="button-previous.png" MouseDown="prev_page">
+            <Image.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-previous.png"/>
-            </Button.Background>
-        </Button>
+            </Image.Effect>
+        </Image>
 
     </Grid>
 </Window>
