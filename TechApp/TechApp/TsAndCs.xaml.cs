@@ -56,11 +56,7 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            SetUpAppointment Appt2 = new SetUpAppointment();
-            Appt2.Show();
-
-            // Hide the MainWindow until later
-            this.Close();
+          
         }
 
         private void next_page(object sender, MouseButtonEventArgs e)
