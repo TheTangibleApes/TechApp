@@ -15,16 +15,13 @@
             <ColumnDefinition Width="127*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="TextBox1" HorizontalAlignment="Left" Height="112" Margin="62,219,0,0" TextWrapping="Wrap" Text="Thank you for completing." VerticalAlignment="Top" Width="1065" FontSize="72" Foreground="White" FontStyle="Italic"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" BorderBrush="#00707070" Click="button_Click_1">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-next.png"/>
-            </Button.Background>
-        </Button>
         <Grid HorizontalAlignment="Left" Height="100" Margin="61.114,198,-34,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="379" Source="Tech_LOGO.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" Grid.ColumnSpan="2" MouseDown="next_page">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
 
     </Grid>
 </Window>
