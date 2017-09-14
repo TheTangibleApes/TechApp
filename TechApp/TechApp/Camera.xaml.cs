@@ -54,9 +54,7 @@ namespace TechApp
         }
 
         public JpegBitmapEncoder GetCameraImageAsJPEG(BitmapSource SourceImage)
-        {
-
-            
+        { 
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(SourceImage));
             encoder.QualityLevel = 100;
@@ -90,6 +88,24 @@ namespace TechApp
         {
             TsAndCs TandC = new TsAndCs();
             TandC.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
+
+        private void prev_page(object sender, MouseButtonEventArgs e)
+        {
+            TsAndCs TandC = new TsAndCs();
+            TandC.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
+
+        private void next_page(object sender, MouseButtonEventArgs e)
+        {
+            SignatureWindow Signature = new SignatureWindow();
+            Signature.Show();
 
             // Hide the MainWindow until later
             this.Close();

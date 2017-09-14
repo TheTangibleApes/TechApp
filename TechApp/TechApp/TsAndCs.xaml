@@ -9,7 +9,7 @@
     <Window.Background>
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
-    <Grid>
+    <Grid MouseDown="prev_page">
         <ListBox x:Name="listBox" Height="452" Margin="10,10,0,0" Width="1252" Background="#CC3A3A3A" Foreground="White" SelectionChanged="listBox_SelectionChanged" BorderBrush="#00ABADB3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkBox" Content="Yes" HorizontalAlignment="Center" Margin="508,0,664,101" VerticalAlignment="Bottom" FontSize="36" Width="100" Foreground="#FF00FF2E" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom">
             <CheckBox.Effect>
@@ -21,21 +21,21 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </CheckBox.Effect>
         </CheckBox>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Height="100" Click="button_Click" BorderBrush="#00707070" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom">
-            <Button.Background>
-                <ImageBrush ImageSource="button-previous.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Height="100" Click="button1_Click" BorderBrush="#00707070" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom">
-            <Button.Background>
-                <ImageBrush ImageSource="button-next.png"/>
-            </Button.Background>
-        </Button>
         <Label x:Name="label1" Content="Do you agree to these terms?" HorizontalAlignment="Center" Margin="402,0,392,148" VerticalAlignment="Bottom" FontSize="36" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
 
     </Grid>
 </Window>
