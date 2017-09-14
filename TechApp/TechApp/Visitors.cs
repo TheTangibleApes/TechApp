@@ -7,10 +7,8 @@ using MySql.Data.MySqlClient;
 using System.Windows.Media.Imaging;
 using System.IO;
 
-namespace TechApp
-{
-    public class Visitors
-    {
+namespace TechApp{
+    public class Visitors{
         string firstname;
         string lastname;
         string phonenumber;
@@ -25,8 +23,8 @@ namespace TechApp
             staffid = -1;
         }
 
-        public void SetInformation(string FirstName, string LastName, string PhoneNumber, string EmailAddress, DateTime AppointmentTime, int StaffID)
-        {
+        public void SetInformation(string FirstName, string LastName, string PhoneNumber, string EmailAddress, DateTime AppointmentTime, int StaffID){
+            //TODO: review this
             firstname = FirstName;
             lastname = LastName;
             phonenumber = PhoneNumber;
@@ -37,10 +35,8 @@ namespace TechApp
 
         public void SubmitToDatabase()
         {
+            //TODO: review this
             ConvertImageToByteArray();
-
-
-            
 
             if (staffid >= 0)
             {
@@ -53,12 +49,12 @@ namespace TechApp
                     try
                     {
                         string query =
-                            "insert into tangible.tbltechVisitors(firstName,lastName,phoneNumber,emailAddress, appointmentTime, teacherID) values('" + 
-                                this.firstname + "','" + 
-                                this.lastname + "','" + 
-                                this.phonenumber + "','" + 
-                                this.emailaddress + "','" + 
-                                this.appointmenttime + "','" + 
+                            "insert into tangible.tbltechVisitors(firstName,lastName,phoneNumber,emailAddress, appointmentTime, teacherID) values('" +
+                                this.firstname + "','" +
+                                this.lastname + "','" +
+                                this.phonenumber + "','" +
+                                this.emailaddress + "','" +
+                                this.appointmenttime + "','" +
                                 this.staffid + "';";
 
                         MySqlCommand MyCommand2 = new MySqlCommand(query, cnn);
@@ -84,28 +80,40 @@ namespace TechApp
         }
 
 
-        private byte[] ConvertImageToByteArray()
-        {
-            byte[] Ret;
 
-            using (MemoryStream ms = new MemoryStream())
-            {
-                image.Save(ms);
-                Ret = ms.ToArray();
-            }
+        private byte[]  ConvertImageToByteArray()
+        {            
+            byte[] Ret;
+              
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    image.Save(ms);
+                    Ret = ms.ToArray();
+                }
             return Ret;
         }
 
+        private string ByteArrayToString(byte[] bytearray)
+        {
+            string querystatement = BitConverter.ToString(bytearray);
+            querystatement = BitConverter.ToString(bytearray).Replace("-", "");
+            //for (int i = 0; i < bytearray.Length; i++)
+            //{
+            //    querystatement = querystatement + bytearray[i];
+            //}
+            return querystatement;
+        }
 
         public Boolean SubmitImageToDatabase()
         {
-            ConvertImageToByteArray();
+            //TODO: review this
+            ByteArrayToString(ConvertImageToByteArray());
             return true;
         }
 
 
-        public void RemoveFromDatabase(int ID)
-        {
+        public void RemoveFromDatabase(int ID){
+            //TODO: review this
             string connectionString;
             MySqlConnection cnn;
             connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
@@ -127,15 +135,13 @@ namespace TechApp
                     }
                     cnn.Close();
                 }
-                finally
-                {
+                finally{
                     cnn.Close();
                 }
             }
-            finally
-            {
+            finally{
                 cnn.Close();
             }
         }
-    }
+    }    
 }

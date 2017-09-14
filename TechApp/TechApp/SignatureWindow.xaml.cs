@@ -242,5 +242,14 @@ namespace TechApp
             }
 
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Camera Camera = new Camera();
+            Camera.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }

@@ -7,62 +7,56 @@
         mc:Ignorable="d"
         Title="SignUpPage" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="439*"/>
-            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="262,79,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="60" Width="205">
+        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="260,133,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="60" Width="205">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="262,171,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="200">
+        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="260,225,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="200">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="262,267,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="146">
+        <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="260,321,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="146">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label4" Content="Email:" HorizontalAlignment="Left" Margin="262,361,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="118">
+        <Label x:Name="label4" Content="Email:" HorizontalAlignment="Left" Margin="260,415,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="118">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Left" Margin="262,452,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60">
+        <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Left" Margin="260,506,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="339">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="732,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="732,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="732,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="732,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="732,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" Grid.ColumnSpan="2"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" Height="100" FontSize="24" BorderBrush="#FF7C7272" Click="button_Click" BorderThickness="0" Grid.ColumnSpan="2">
-            <Button.Effect>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="730,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="730,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" TextChanged="textBox1_TextChanged"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="730,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="730,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="730,506,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
+        <Image x:Name="image" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_screen">
+            <Image.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-next.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" FontSize="24" Click="button1_Click" BorderThickness="0">
-            <Button.Effect>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page">
+            <Image.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-previous.png"/>
-            </Button.Background>
-        </Button>
+            </Image.Effect>
+        </Image>
 
     </Grid>
 </Window>

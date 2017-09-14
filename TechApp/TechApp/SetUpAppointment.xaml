@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="SetUpAppointment" Height="720" Width="1280" Foreground="#FFFFF9F9">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg"/>
+        <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Left" Margin="216,115,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White">
+        <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Center" Margin="237,184,258,447" VerticalAlignment="Center" FontSize="36" Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="386,195,0,0" VerticalAlignment="Top" Width="450" Height="60" IsReadOnly="True" FontSize="36" SelectedIndex="0" Cursor="Hand" HorizontalContentAlignment="Center">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Margin="403,286,419,319" VerticalAlignment="Center" Width="450" Height="84" IsReadOnly="True" FontSize="36" SelectedIndex="0" Cursor="Hand" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
@@ -26,13 +26,12 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <DatePicker HorizontalAlignment="Left" Margin="386,413,0,0" VerticalAlignment="Top" Width="450" Height="60" FontSize="36"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="400" Height="100" FontSize="24" Click="button_Click" BorderThickness="0">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Height="100" FontSize="24" Click="button_Click" BorderThickness="0" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left">
             <Button.Background>
                 <ImageBrush ImageSource="button-previous.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Margin="862,579,0,0" VerticalAlignment="Top" Width="400" FontSize="24" Height="100" BorderThickness="0" Click="button1_Click">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" FontSize="24" Height="100" BorderThickness="0" Click="button1_Click" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right">
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>
