@@ -175,6 +175,7 @@
     <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Wallpaper4K.png" />
     <Resource Include="NewBG.png" />
     <Resource Include="button-next.png" />
     <Resource Include="button-previous.png" />

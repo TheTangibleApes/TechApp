@@ -7,17 +7,20 @@
         mc:Ignorable="d"
         Title="CompleteWindow" Height="720" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.png"/>
+        <ImageBrush ImageSource="Wallpaper4K.png"/>
     </Window.Background>
     <Grid Margin="0,0,-8,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1153*"/>
-            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="319*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="TextBox1" HorizontalAlignment="Left" Height="112" Margin="62,219,0,0" TextWrapping="Wrap" Text="Thank you for completing." VerticalAlignment="Top" Width="1065" FontSize="72" Foreground="White" FontStyle="Italic"/>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="61.114,198,-34,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="379" Source="Tech_LOGO.png"/>
-        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" Grid.ColumnSpan="2" MouseDown="next_page">
+        <TextBlock x:Name="TextBox1" HorizontalAlignment="Center" Height="112" Margin="151,283,151,294" TextWrapping="Wrap" Text="THANK YOU FOR COMPLETING" VerticalAlignment="Center" Width="974" FontSize="72" Foreground="White" FontWeight="ExtraLight">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="61,198,-157,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <Image x:Name="image1" HorizontalAlignment="Center" Height="100" Margin="419,395,457,194" VerticalAlignment="Center" Width="400" Source="button-next.png" MouseDown="next_page">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
