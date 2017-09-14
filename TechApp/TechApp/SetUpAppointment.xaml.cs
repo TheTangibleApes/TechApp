@@ -92,5 +92,32 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void prev_page_4(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
+
+        private void prev_page_24(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
+
+        private void next_page_55(object sender, MouseButtonEventArgs e)
+        {
+            TsAndCs TandC = new TsAndCs();
+            TandC.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
     }
 }
