@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Windows.Media.Imaging;
+using MySql.Data.MySqlClient;
 using System.IO;
+using System.Data;
 
 namespace TechApp{
     public class Visitors{
+        string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
         string firstname;
         string lastname;
         string phonenumber;
@@ -19,6 +21,7 @@ namespace TechApp{
 
         public Visitors()
         {
+            //TODO: review this
             appointmenttime = DateTime.Now;
             staffid = -1;
         }
@@ -36,11 +39,10 @@ namespace TechApp{
         public void SubmitToDatabase()
         {
             //TODO: review this
-            ConvertImageToByteArray();
+            //ConvertImageToByteArray();
 
             if (staffid >= 0)
             {
-                string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
                 MySqlConnection cnn;
                 cnn = new MySqlConnection(connectionString);
                 try
@@ -81,42 +83,90 @@ namespace TechApp{
 
 
 
-        private byte[]  ConvertImageToByteArray()
-        {            
+        private byte[] ConvertImageToByteArray()
+        {
             byte[] Ret;
-              
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    image.Save(ms);
-                    Ret = ms.ToArray();
-                }
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms);
+                Ret = ms.ToArray();
+            }
             return Ret;
         }
 
-        private string ByteArrayToString(byte[] bytearray)
-        {
-            string querystatement = BitConverter.ToString(bytearray);
-            querystatement = BitConverter.ToString(bytearray).Replace("-", "");
-            //for (int i = 0; i < bytearray.Length; i++)
-            //{
-            //    querystatement = querystatement + bytearray[i];
-            //}
-            return querystatement;
-        }
+        //private string ByteArrayToString(byte[] bytearray)
+        //{
+        //    string querystatement = BitConverter.ToString(bytearray);
+        //    querystatement = BitConverter.ToString(bytearray).Replace("-", "");
+        //    //for (int i = 0; i < bytearray.Length; i++)
+        //    //{
+        //    //    querystatement = querystatement + bytearray[i];
+        //    //}
+        //    return querystatement;
+        //}
 
         public Boolean SubmitImageToDatabase()
         {
-            //TODO: review this
-            ByteArrayToString(ConvertImageToByteArray());
-            return true;
+            ////TODO: review this
+            //ByteArrayToString(ConvertImageToByteArray());
+            //return true;
+
+            bool result;
+            MySqlConnection con = new MySqlConnection(connectionString);
+            MySqlCommand cmd;
+            try
+            {
+
+                byte[] ImageData = ConvertImageToByteArray();
+
+
+
+                string CmdString = "INSERT INTO tangible.tbltechvisitors(FirstName, LastName, Image, EmailAddress) VALUES(@FirstName, @LastName, @Image, @EmailAddress)";
+                cmd = new MySqlCommand(CmdString, con);
+
+                cmd.Parameters.Add("@FirstName", MySqlDbType.VarChar, 45);
+                cmd.Parameters.Add("@LastName", MySqlDbType.VarChar, 45);
+                cmd.Parameters.Add("@Image", MySqlDbType.Blob);
+                cmd.Parameters.Add("@EmailAddressAddress", MySqlDbType.VarChar, 100);
+
+                cmd.Parameters["@FirstName"].Value = firstname;
+                cmd.Parameters["@LastName"].Value = lastname;
+                cmd.Parameters["@Image"].Value = ImageData;
+                cmd.Parameters["@EmailAddress"].Value = emailaddress;
+
+                con.Open();
+                int RowsAffected = cmd.ExecuteNonQuery();
+                if (RowsAffected > 0)
+                {
+                    result = true;
+                }                
+                else
+                {
+                    result = false;
+                }
+                con.Close();
+            }
+            catch (Exception)
+            {
+                return result = false;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return result;
         }
+
+    
 
 
         public void RemoveFromDatabase(int ID){
             //TODO: review this
-            string connectionString;
             MySqlConnection cnn;
-            connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
             cnn = new MySqlConnection(connectionString);
             try
             {
