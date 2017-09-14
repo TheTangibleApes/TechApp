@@ -26,22 +26,16 @@
         <Button x:Name="bntContinue" Content="Recapture" Background="#34000000"  Margin="317,17,30,146" Click="bntContinue_Click" FontSize="50" Grid.Column="3" Grid.Row="3" BorderBrush="#00707070" Foreground="White" FontWeight="Light" Grid.RowSpan="2" Height="100" Width="390" Grid.ColumnSpan="2" />
         <Image x:Name="imgVideo" Stretch="Fill"   Grid.ColumnSpan="4" Grid.Column="1" Margin="249,30,357,0"  Grid.RowSpan="3"   />
         <Button x:Name="bntCapture" Content="Capture Image" Background="#33000000" Click="bntCapture_Click" Margin="30,17,24,146" FontSize="50" Grid.Row="3" Grid.ColumnSpan="2" Foreground="White" BorderBrush="#00707070" FontWeight="Light" Grid.RowSpan="2" Height="100" Width="390" />
-        <Button Content="" Grid.Column="3" HorizontalAlignment="Right" Margin="0,0,10,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Height="100" Click="Return" BorderThickness="0" Grid.ColumnSpan="2">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-next.png"/>
-            </Button.Background>
-        </Button>
         <Button x:Name="bntSaveImage" Content="Save Image" Background="#33000000" Margin="342,17,52,146" FontSize="50" Click="bntSaveImage_Click" RenderTransformOrigin="2.369,0.433" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Foreground="White" BorderBrush="#00707070" FontWeight="Light" Grid.RowSpan="2" Height="100" Width="390" />
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,0,0,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Height="100" Grid.ColumnSpan="2" BorderThickness="0" Click="button_Click">
-            <Button.Effect>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" Grid.ColumnSpan="2" MouseDown="prev_page">
+            <Image.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="button-previous.png"/>
-            </Button.Background>
-        </Button>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image1" Grid.Column="3" Height="100" Margin="338,0,10,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Source="button-next.png" Grid.ColumnSpan="2" MouseDown="next_page">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
     </Grid>
 </Window>
