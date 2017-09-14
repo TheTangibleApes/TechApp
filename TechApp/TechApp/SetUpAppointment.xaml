@@ -27,7 +27,6 @@
             </ComboBox.Background>
         </ComboBox>
         <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,-64,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="-65,0,0,10" VerticalAlignment="Bottom" Width="401" Source="button-previous.png" MouseDown="prev_page_100"/>
 
     </Grid>
 </Window>
