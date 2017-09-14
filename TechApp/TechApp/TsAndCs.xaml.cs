@@ -67,5 +67,14 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void prev_page_2(object sender, MouseButtonEventArgs e)
+        {
+            SetUpAppointment Appt2 = new SetUpAppointment();
+            Appt2.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }
