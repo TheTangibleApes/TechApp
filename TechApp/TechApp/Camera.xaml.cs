@@ -54,9 +54,7 @@ namespace TechApp
         }
 
         public JpegBitmapEncoder GetCameraImageAsJPEG(BitmapSource SourceImage)
-        {
-
-            
+        { 
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(SourceImage));
             encoder.QualityLevel = 100;
