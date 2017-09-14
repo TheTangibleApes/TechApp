@@ -77,10 +77,10 @@ namespace TechApp
 
         private void prev_page_2(object sender, MouseButtonEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
+            SignUpPage SUP = new SignUpPage();
+            SUP.Show();
 
-            // Hide the MainWindow until later
+            //Hide the MainWindow until later
             this.Close();
         }
     }
