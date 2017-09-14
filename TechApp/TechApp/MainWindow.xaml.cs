@@ -37,7 +37,7 @@ namespace TechApp
         {
             SignUpPage Apt1 = new SignUpPage();
             Apt1.Show();
-            MessageBox.Show("Signuppage move");
+            System.Windows.MessageBox.Show("Signuppage move");
 
             // Hide the MainWindow until later
             this.Hide();
