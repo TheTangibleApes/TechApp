@@ -251,5 +251,23 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void prev_page(object sender, MouseButtonEventArgs e)
+        {
+            Camera Camera = new Camera();
+            Camera.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
+
+        private void next_page(object sender, MouseButtonEventArgs e)
+        {
+            CompleteWindow CW = new CompleteWindow();
+            CW.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }
