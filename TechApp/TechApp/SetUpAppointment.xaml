@@ -9,7 +9,7 @@
     <Window.Background>
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
-    <Grid>
+    <Grid MouseDown="next_page">
         <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Center" Margin="237,184,258,447" VerticalAlignment="Center" FontSize="36" Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
@@ -26,16 +26,8 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Height="100" FontSize="24" Click="button_Click" BorderThickness="0" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left">
-            <Button.Background>
-                <ImageBrush ImageSource="button-previous.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" FontSize="24" Height="100" BorderThickness="0" Click="button1_Click" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right">
-            <Button.Background>
-                <ImageBrush ImageSource="button-next.png"/>
-            </Button.Background>
-        </Button>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" Width="400" Source="button-previous.png" MouseDown="prev_page" VerticalAlignment="Bottom"/>
+        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png"/>
 
     </Grid>
 </Window>
