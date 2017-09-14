@@ -26,12 +26,12 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page">
+        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,-74,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image x:Name="image1_2" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page_2">
+        <Image x:Name="image1_2" HorizontalAlignment="Left" Height="100" Margin="-86,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page_2">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
