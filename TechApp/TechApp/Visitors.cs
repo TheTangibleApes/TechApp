@@ -86,7 +86,6 @@ namespace TechApp{
         private byte[] ConvertImageToByteArray()
         {
             byte[] Ret;
-
             using (MemoryStream ms = new MemoryStream())
             {
                 image.Save(ms);
@@ -117,23 +116,25 @@ namespace TechApp{
             MySqlCommand cmd;
             try
             {
-
                 byte[] ImageData = ConvertImageToByteArray();
-
-
-
-                string CmdString = "INSERT INTO tangible.tbltechvisitors(FirstName, LastName, Image, EmailAddress) VALUES(@FirstName, @LastName, @Image, @EmailAddress)";
+                string CmdString = "INSERT INTO tangible.tbltechvisitors(firstName, lastName, phoneNumber, emailAddress, appointmentTime, teacherID, image) VALUES(@FirstName, @LastName, @PhoneNumber, @EmailAddress, @AppointmentTime, @TeacherID, @Image)";
                 cmd = new MySqlCommand(CmdString, con);
 
-                cmd.Parameters.Add("@FirstName", MySqlDbType.VarChar, 45);
-                cmd.Parameters.Add("@LastName", MySqlDbType.VarChar, 45);
+                cmd.Parameters.Add("@FirstName", MySqlDbType.VarChar, 50);
+                cmd.Parameters.Add("@LastName", MySqlDbType.VarChar, 50);
+                cmd.Parameters.Add("@PhoneNumber", MySqlDbType.VarChar, 50);
+                cmd.Parameters.Add("@EmailAddress", MySqlDbType.VarChar, 100);
+                cmd.Parameters.Add("@AppointmentTime", MySqlDbType.DateTime);
+                cmd.Parameters.Add("@TeacherID", MySqlDbType.Int16);
                 cmd.Parameters.Add("@Image", MySqlDbType.Blob);
-                cmd.Parameters.Add("@EmailAddressAddress", MySqlDbType.VarChar, 100);
 
                 cmd.Parameters["@FirstName"].Value = firstname;
                 cmd.Parameters["@LastName"].Value = lastname;
-                cmd.Parameters["@Image"].Value = ImageData;
+                cmd.Parameters["@PhoneNumber"].Value = phonenumber;
                 cmd.Parameters["@EmailAddress"].Value = emailaddress;
+                cmd.Parameters["@AppointmentTime"].Value = appointmenttime;
+                cmd.Parameters["@TeacherID"].Value = staffid;
+                cmd.Parameters["@Image"].Value = ImageData;
 
                 con.Open();
                 int RowsAffected = cmd.ExecuteNonQuery();
