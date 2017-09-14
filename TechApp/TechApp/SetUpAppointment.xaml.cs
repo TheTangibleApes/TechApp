@@ -74,5 +74,23 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void prev_page_2(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage SUP = new SignUpPage();
+            SUP.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
+
+        private void image1_2_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
+
+            // Hide the MainWindow until later
+            this.Close();
+        }
     }
 }

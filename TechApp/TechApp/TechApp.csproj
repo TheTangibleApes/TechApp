@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="NewBG.png" />
+    <Resource Include="Wallpaper4K.png" />
     <Resource Include="button-next.png" />
     <Resource Include="button-previous.png" />
     <Content Include="DLLs\WebCam_Capture.dll" />

@@ -26,8 +26,12 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,0,0,10" Width="400" Source="button-previous.png" MouseDown="prev_page" VerticalAlignment="Bottom"/>
-        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,-75,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png"/>
+        <Image x:Name="image1_2" HorizontalAlignment="Left" Height="100" Margin="-81,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="image1_2_MouseDown">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
 
     </Grid>
 </Window>
