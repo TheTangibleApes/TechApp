@@ -172,9 +172,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BGImage.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Tech_LOGO.png" />
   </ItemGroup>
   <ItemGroup>
