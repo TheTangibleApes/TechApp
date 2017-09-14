@@ -71,7 +71,7 @@ namespace TechApp
 
             AA.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
 
-            AA.SubmitToDatabase();
+            AA.SubmitImageToDatabase();
 
         }
 
