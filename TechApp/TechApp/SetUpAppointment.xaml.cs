@@ -39,6 +39,11 @@ namespace TechApp
             }
         }
 
+        private void prev_page(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
         private void next_page(object sender, MouseButtonEventArgs e)
         {
 
