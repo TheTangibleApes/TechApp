@@ -26,6 +26,7 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="548,605,0,-16" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
     
