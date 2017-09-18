@@ -41,12 +41,20 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
+            SignUpPage Apt1 = new SignUpPage();
+            Apt1.Show();
 
+            // Hide the MainWindow until later
+            this.Close();
         }
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
+            TsAndCs Apt1 = new TsAndCs();
+            Apt1.Show();
 
+            // Hide the MainWindow until later
+            this.Close();
         }
     }
 }

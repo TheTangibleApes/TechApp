@@ -17,46 +17,38 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Left" Margin="260,133,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="60" Width="205">
+        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Center" Margin="233,42,682,527" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="120" Width="357" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Left" Margin="260,225,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="200">
+        <Label x:Name="label2" Content="Last Name:" HorizontalAlignment="Center" Margin="237,134,687,435" FontSize="36" Foreground="White" Height="120" Width="348" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Left" Margin="260,321,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="146">
+        <Label x:Name="label3" Content="Phone:" HorizontalAlignment="Center" Margin="285,230,733,339" FontSize="36" Foreground="White" Height="120" Width="254" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label4" Content="Email:" HorizontalAlignment="Left" Margin="260,415,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="118">
+        <Label x:Name="label4" Content="Email:" HorizontalAlignment="Center" Margin="309,324,757,245" FontSize="36" Foreground="White" Height="120" Width="206" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Left" Margin="260,506,0,0" VerticalAlignment="Top" FontSize="36" Foreground="White" Height="60" Width="339">
+        <Label x:Name="label5" Content="Company (Optional):" HorizontalAlignment="Center" Margin="117,415,565,154" FontSize="36" Foreground="White" Height="120" Width="590" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="730,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" TextChanged="textBox_TextChanged" KeyDown="FNText"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="60" Margin="730,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" TextChanged="textBox1_TextChanged" KeyDown="LNText"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="60" Margin="730,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36" KeyDown="Phone_No"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="60" Margin="730,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="60" Margin="730,506,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="36"/>
-        <Image x:Name="image" HorizontalAlignment="Right" Height="100" Margin="0,0,-65,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_screen" Grid.ColumnSpan="2">
-            <Image.Effect>
-                <DropShadowEffect/>
-            </Image.Effect>
-        </Image>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="-65,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page">
-            <Image.Effect>
-                <DropShadowEffect/>
-            </Image.Effect>
-        </Image>
+        <TextBox x:Name="textBox" HorizontalAlignment="Center" Height="69" Margin="544,65,170,555" TextWrapping="Wrap" Width="558" FontSize="36" TextChanged="textBox_TextChanged" KeyDown="FNText" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Center" Height="68" Margin="544,162,170,459" TextWrapping="Wrap" Width="558" FontSize="36" TextChanged="textBox1_TextChanged" KeyDown="LNText" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Center" Height="68" Margin="542,259,172,362" TextWrapping="Wrap" Width="558" FontSize="36" KeyDown="Phone_No" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Center" Height="66" Margin="542,355,172,268" TextWrapping="Wrap" Width="558" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Center" Height="74" Margin="542,461,172,154" TextWrapping="Wrap" Width="558" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+        <Image x:Name="image" HorizontalAlignment="Right" Height="100" Margin="0,0,-65,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_screen" Grid.ColumnSpan="2"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="-65,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page"/>
 
     </Grid>
 </Window>
