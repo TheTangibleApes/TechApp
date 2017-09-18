@@ -17,7 +17,7 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Center" Margin="216,65,861,555" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="69" Width="195" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
+        <Label x:Name="label1" Content="First Name:" HorizontalAlignment="Center" Margin="220,65,857,555" FontSize="36" Foreground="White" RenderTransformOrigin="0.69,0.207" Height="69" Width="195" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
             </Label.Effect>
