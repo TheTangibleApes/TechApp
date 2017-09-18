@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Signature_Page" Height="718" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="NewBG.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.Background>
