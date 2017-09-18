@@ -20,11 +20,13 @@ namespace TechApp
     /// </summary>
     public partial class SetUpAppointment : Window
     {
-        public SetUpAppointment()
+        private Visitors _visitor;
+        public SetUpAppointment(Visitors TheApptVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = TheApptVisitor;
 
             string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
             string Sql = "select CONCAT(firstName,' ', lastname) from tangible.tbltechTeachers \r\n ORDER BY firstname";
@@ -41,7 +43,7 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
+            SignUpPage Apt1 = new SignUpPage(this, _visitor);
             Apt1.Show();
             
             // Hide the MainWindow until later
@@ -59,7 +61,7 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
+            SignUpPage Apt1 = new SignUpPage(this, _visitor);
             Apt1.Show();
 
             // Hide the MainWindow until later
@@ -77,7 +79,7 @@ namespace TechApp
 
         private void prev_page_2(object sender, MouseButtonEventArgs e)
         {
-            SignUpPage SUP = new SignUpPage();
+            SignUpPage SUP = new SignUpPage(this, _visitor);
             SUP.Show();
 
             // Hide the MainWindow until later
@@ -86,7 +88,7 @@ namespace TechApp
 
         private void image1_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
+            SignUpPage Apt1 = new SignUpPage(this, _visitor);
             Apt1.Show();
 
             // Hide the MainWindow until later

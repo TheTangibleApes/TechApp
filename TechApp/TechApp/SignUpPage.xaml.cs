@@ -18,6 +18,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using TechApp;
 
 namespace TechApp
 {
@@ -26,27 +27,37 @@ namespace TechApp
     /// </summary>
     public partial class SignUpPage : Window
     {
-        public SignUpPage()
+        private Window _parent;
+        private Visitors _visitor;
+        public SignUpPage(Window Parent, Visitors TheSUPVisitor)
         {
+            _parent = Parent;
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-         
+            _visitor = TheSUPVisitor;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            /*
+            We cannot create another instance of the Hoem screen since it was never destroyed to start off with
+            
             MainWindow HomeScreen = new MainWindow();
             HomeScreen.Show();
 
+            Rather hide this screen, after showing the main screen
+            */
+
+            _parent.Show();
             // Hide the MainWindow until later
             this.Close();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-            SetUpAppointment Apt2 = new SetUpAppointment();
+            
+            SetUpAppointment Apt2 = new SetUpAppointment(_visitor);
             Apt2.Show();
 
             // Hide the MainWindow until later
@@ -63,40 +74,22 @@ namespace TechApp
 
         }
 
-        private void Clicked(object sender, TouchEventArgs e)
-        {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
-
-            // Hide the MainWindow until later
-            this.Hide();
-        }
-
-        private void Tapped(object sender, MouseButtonEventArgs e)
-        {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
-
-            // Hide the MainWindow until later
-            this.Hide();
-        }
-
         private void next_screen(object sender, MouseButtonEventArgs e)
         {
-            SetUpAppointment Apt1 = new SetUpAppointment();
+            
+            SetUpAppointment Apt1 = new SetUpAppointment(_visitor);
             Apt1.Show();
 
             // Hide the MainWindow until later
-            this.Hide();
+            this.Close();
         }
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            MainWindow Apt1 = new MainWindow();
-            Apt1.Show();
+            _parent.Show();
 
             // Hide the MainWindow until later
-            this.Hide();
+            this.Close();
         }
     }
 }

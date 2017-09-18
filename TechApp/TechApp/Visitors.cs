@@ -9,7 +9,8 @@ using System.IO;
 using System.Data;
 
 namespace TechApp{
-    public class Visitors{
+    public class Visitors : IDisposable
+    {
         string connectionString = "server=172.17.20.19;database=tangible;uid=2021029;pwd=2021029;";
         string firstname;
         string lastname;
@@ -34,6 +35,11 @@ namespace TechApp{
             emailaddress = EmailAddress;
             appointmenttime = AppointmentTime;
             staffid = StaffID;
+        }
+
+        public void Dispose()
+        {
+
         }
 
         public void SubmitToDatabase()

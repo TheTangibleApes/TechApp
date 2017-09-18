@@ -9,7 +9,7 @@
     <Window.Background>
         <ImageBrush ImageSource="Wallpaper4K.png"/>
     </Window.Background>
-    <Grid>
+    <Grid GotFocus="Grid_GotFocus">
         <Image HorizontalAlignment="Center" Height="100" Margin="435,361,437,228" VerticalAlignment="Center" Width="400" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped">
             <Image.Effect>
                 <DropShadowEffect/>
