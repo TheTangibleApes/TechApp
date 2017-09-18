@@ -38,32 +38,9 @@ namespace TechApp
             _visitor = TheSUPVisitor;
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            /*
-            We cannot create another instance of the Hoem screen since it was never destroyed to start off with
-            
-            MainWindow HomeScreen = new MainWindow();
-            HomeScreen.Show();
+        public Boolean Completed;
 
-            Rather hide this screen, after showing the main screen
-            */
-
-            _parent.Show();
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            SetUpAppointment Apt2 = new SetUpAppointment(_visitor);
-            Apt2.Show();
-
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
+      
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             
@@ -74,14 +51,34 @@ namespace TechApp
 
         }
 
+
         private void next_screen(object sender, MouseButtonEventArgs e)
         {
-            
-            SetUpAppointment Apt1 = new SetUpAppointment(_visitor);
-            Apt1.Show();
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                // Message box
+                MessageBox.Show("Please Enter Your First Name");
+            }
+            else if(string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Please Enter Your Last Name");
+            }
+            else if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Please Enter Your Phone Number");
+            }
+            else if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Please Enter Your Email Address");
+            }
+            else
+            {
+                SetUpAppointment Apt1 = new SetUpAppointment();
+                Apt1.Show();
 
-            // Hide the MainWindow until later
-            this.Close();
+                // Hide the MainWindow until later
+                this.Hide();
+            }
         }
 
         private void prev_page(object sender, MouseButtonEventArgs e)
@@ -104,9 +101,23 @@ namespace TechApp
                 e.Handled = true;
         }
 
-        private void Phone_No(object sender, System.Windows.Input.KeyEventArgs e)
+
+        private void Number_Only(object sender, EventArgs e)
         {
-            
+            /*if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+            }*/
+        }
+
+        private void TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+            }
         }
     }
 }
