@@ -67,7 +67,7 @@ namespace TechApp
         {
             if(acceptedTerms == true)
             {
-                Camera CameraSystem = new Camera();
+                Camera CameraSystem = new Camera(_visitor);
                 CameraSystem.Show();
 
                 // Hide the MainWindow until later
