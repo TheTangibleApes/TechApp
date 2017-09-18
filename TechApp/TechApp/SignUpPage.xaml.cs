@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Windows.Forms;
+
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -73,7 +73,7 @@ namespace TechApp
             }
             else
             {
-                SetUpAppointment Apt1 = new SetUpAppointment();
+                SetUpAppointment Apt1 = new SetUpAppointment(_visitor);
                 Apt1.Show();
 
                 // Hide the MainWindow until later

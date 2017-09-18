@@ -48,7 +48,7 @@ namespace TechApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Camera CameraSystem = new Camera();
+            Camera CameraSystem = new Camera(TheSingleVisitor);
             CameraSystem.Show();
 
             // Hide the MainWindow until later

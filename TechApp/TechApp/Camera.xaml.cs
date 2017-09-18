@@ -19,12 +19,14 @@ namespace TechApp
     /// </summary>
     public partial class Camera : Window
     {
+        Visitors _visitor;
         WebCam webcam;
-        public Camera()
+        public Camera(Visitors CameraVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = CameraVisitor;
         }
 
         private void mainWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
@@ -34,7 +36,7 @@ namespace TechApp
             webcam.InitializeWebCam(ref imgVideo);
             if (webcam == null)
             {
-                SignatureWindow Signature = new SignatureWindow();
+                SignatureWindow Signature = new SignatureWindow(_visitor);
                 Signature.Show();
 
                 // Hide the MainWindow until later
@@ -71,13 +73,13 @@ namespace TechApp
 
             AA.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
 
-            AA.SubmitImageToDatabase();
+            //AA.SubmitImageToDatabase();
 
         }
 
         private void Return(object sender, RoutedEventArgs e)
         {
-            SignatureWindow Signature = new SignatureWindow();
+            SignatureWindow Signature = new SignatureWindow(_visitor);
             Signature.Show();
 
             // Hide the MainWindow until later
@@ -86,7 +88,7 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            TsAndCs TandC = new TsAndCs();
+            TsAndCs TandC = new TsAndCs(_visitor);
             TandC.Show();
 
             // Hide the MainWindow until later
@@ -95,7 +97,7 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            TsAndCs TandC = new TsAndCs();
+            TsAndCs TandC = new TsAndCs(_visitor);
             TandC.Show();
 
             // Hide the MainWindow until later
@@ -104,7 +106,7 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            SignatureWindow Signature = new SignatureWindow();
+            SignatureWindow Signature = new SignatureWindow(_visitor);
             Signature.Show();
 
             // Hide the MainWindow until later

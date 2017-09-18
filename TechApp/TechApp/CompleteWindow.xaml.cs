@@ -19,11 +19,13 @@ namespace TechApp
     /// </summary>
     public partial class CompleteWindow : Window
     {
-        public CompleteWindow()
+        private Visitors _visitor;
+        public CompleteWindow(Visitors TheFinalVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = TheFinalVisitor;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

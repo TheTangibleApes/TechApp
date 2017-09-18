@@ -19,16 +19,18 @@ namespace TechApp
     /// </summary>
     public partial class TsAndCs : Window
     {
-        public TsAndCs()
+        private Visitors _visitor;
+        public TsAndCs(Visitors TsAndCsVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = TsAndCsVisitor;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            SetUpAppointment Appt2 = new SetUpAppointment();
+            SetUpAppointment Appt2 = new SetUpAppointment(_visitor);
             Appt2.Show();
 
             // Hide the MainWindow until later
@@ -37,7 +39,7 @@ namespace TechApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Camera CameraSystem = new Camera();
+            Camera CameraSystem = new Camera(_visitor);
             CameraSystem.Show();
 
             // Hide the MainWindow until later
@@ -61,7 +63,7 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            Camera CameraSystem = new Camera();
+            Camera CameraSystem = new Camera(_visitor);
             CameraSystem.Show();
 
             // Hide the MainWindow until later
@@ -70,7 +72,7 @@ namespace TechApp
 
         private void prev_page_2(object sender, MouseButtonEventArgs e)
         {
-            SetUpAppointment Appt2 = new SetUpAppointment();
+            SetUpAppointment Appt2 = new SetUpAppointment(_visitor);
             Appt2.Show();
 
             // Hide the MainWindow until later

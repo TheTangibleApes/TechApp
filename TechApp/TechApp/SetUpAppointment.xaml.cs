@@ -52,7 +52,7 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            TsAndCs Apt1 = new TsAndCs();
+            TsAndCs Apt1 = new TsAndCs(_visitor);
             Apt1.Show();
 
             // Hide the MainWindow until later
