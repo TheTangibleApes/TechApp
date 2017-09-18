@@ -114,8 +114,7 @@ namespace TechApp
         private void TextChanged(object sender, TextChangedEventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
-            {
-                MessageBox.Show("Please enter only numbers.");
+            { 
                 textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
             }
         }

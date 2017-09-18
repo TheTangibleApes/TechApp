@@ -25,15 +25,15 @@ others for injuries.&#xA;
 at the designated assembly point for the building.
 Ensure you&#xA; are away from buildings and falling
 debris.&#xA;
-- Do as staff direct you." FontSize="24" Height="396"/>
+- Do as staff direct you." FontSize="24" Height="396" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True"/>
         
         </ListBox>
-        <CheckBox x:Name="checkBox" Content="Yes" HorizontalAlignment="Center" Margin="508,0,664,101" VerticalAlignment="Bottom" FontSize="36" Width="100" Foreground="#FF00FF2E" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom">
+        <CheckBox x:Name="YesCheck" Content="Yes" HorizontalAlignment="Center" Margin="508,0,664,101" VerticalAlignment="Bottom" FontSize="36" Width="100" Foreground="#FF00FF2E" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Checked="Yes_Checked">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </CheckBox.Effect>
         </CheckBox>
-        <CheckBox x:Name="checkBox1" Content="No" HorizontalAlignment="Center" Margin="704,0,500,101" VerticalAlignment="Bottom" FontSize="36" Foreground="#FFFF3434" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom">
+        <CheckBox x:Name="NoCheck" Content="No" HorizontalAlignment="Center" Margin="704,0,500,101" VerticalAlignment="Bottom" FontSize="36" Foreground="#FFFF3434" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Checked="No_Checked">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </CheckBox.Effect>
