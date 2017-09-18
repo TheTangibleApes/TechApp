@@ -11,6 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.InteropServices;
+using TechApp;
 
 namespace TechApp
 {
@@ -19,12 +27,15 @@ namespace TechApp
     /// </summary>
     public partial class SignUpPage : Window
     {
-        public SignUpPage()
+        private Window _parent;
+        private Visitors _visitor;
+        public SignUpPage(Window Parent, Visitors TheSUPVisitor)
         {
+            _parent = Parent;
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-         
+            _visitor = TheSUPVisitor;
         }
 
         public Boolean Completed;
@@ -72,11 +83,10 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            MainWindow Apt1 = new MainWindow();
-            Apt1.Show();
+            _parent.Show();
 
             // Hide the MainWindow until later
-            this.Hide();
+            this.Close();
         }
 
         private void FNText(object sender, System.Windows.Input.KeyEventArgs e)
