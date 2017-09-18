@@ -46,7 +46,11 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
+            TsAndCs Apt1 = new TsAndCs();
+            Apt1.Show();
 
+            // Hide the MainWindow until later
+            this.Close();
         }
     }
 }
