@@ -11,13 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Diagnostics;
-using System.IO;
-using System.Runtime.InteropServices;
 
 namespace TechApp
 {
@@ -53,7 +46,19 @@ namespace TechApp
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
                 // Message box
-                System.Windows.MessageBox.Show("Please Enter First Name");
+                MessageBox.Show("Please Enter Your First Name");
+            }
+            else if(string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Please Enter Your Last Name");
+            }
+            else if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Please Enter Your Phone Number");
+            }
+            else if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Please Enter Your Email Address");
             }
             else
             {
