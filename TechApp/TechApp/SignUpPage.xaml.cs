@@ -34,25 +34,9 @@ namespace TechApp
          
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow HomeScreen = new MainWindow();
-            HomeScreen.Show();
+        public Boolean Completed;
 
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-            SetUpAppointment Apt2 = new SetUpAppointment();
-            Apt2.Show();
-
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
+      
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             
@@ -63,31 +47,22 @@ namespace TechApp
 
         }
 
-        private void Clicked(object sender, TouchEventArgs e)
-        {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
-
-            // Hide the MainWindow until later
-            this.Hide();
-        }
-
-        private void Tapped(object sender, MouseButtonEventArgs e)
-        {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
-
-            // Hide the MainWindow until later
-            this.Hide();
-        }
 
         private void next_screen(object sender, MouseButtonEventArgs e)
         {
-            SetUpAppointment Apt1 = new SetUpAppointment();
-            Apt1.Show();
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                // Message box
+                System.Windows.MessageBox.Show("Please Enter First Name");
+            }
+            else
+            {
+                SetUpAppointment Apt1 = new SetUpAppointment();
+                Apt1.Show();
 
-            // Hide the MainWindow until later
-            this.Hide();
+                // Hide the MainWindow until later
+                this.Hide();
+            }
         }
 
         private void prev_page(object sender, MouseButtonEventArgs e)
