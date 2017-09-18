@@ -9,12 +9,8 @@
     <Window.Background>
         <ImageBrush ImageSource="Wallpaper4K.png"/>
     </Window.Background>
-    <Grid GotFocus="Grid_GotFocus">
-        <Image HorizontalAlignment="Center" Height="100" Margin="435,361,437,228" VerticalAlignment="Center" Width="400" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped">
-            <Image.Effect>
-                <DropShadowEffect/>
-            </Image.Effect>
-        </Image>
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="100" Margin="435,361,437,228" VerticalAlignment="Center" Width="400" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped"/>
         <Label Content="TAP TO START:" HorizontalAlignment="Center" Margin="396,255,400,333" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="72" Height="101" Width="476" FontWeight="ExtraLight" Background="{x:Null}">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -26,6 +22,7 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="548,605,0,-16" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
     

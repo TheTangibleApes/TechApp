@@ -7,16 +7,13 @@
         mc:Ignorable="d"
         Title="Signature_Page" Height="718" Width="1280">
     <Window.Background>
-        <ImageBrush ImageSource="NewBG.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="NewBG.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
         <Button x:Name="buttonSubmit" Content="" HorizontalAlignment="Left" Margin="863,577,0,0" VerticalAlignment="Top" Width="399" Click="buttonSubmit_Click" Height="100">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="button-next.png"/>
             </Button.Background>
@@ -26,9 +23,6 @@
         </Button>
         <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252"/>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="10,577,0,0" VerticalAlignment="Top" Width="400" Height="100" BorderThickness="0">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="button-previous.png"/>
             </Button.Background>

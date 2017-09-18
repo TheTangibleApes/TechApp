@@ -27,12 +27,12 @@
         <Image x:Name="imgVideo" Stretch="Fill"   Grid.ColumnSpan="4" Grid.Column="1" Margin="249,30,357,0"  Grid.RowSpan="3"   />
         <Button x:Name="bntCapture" Content="Capture Image" Background="#33000000" Click="bntCapture_Click" Margin="30,17,24,146" FontSize="50" Grid.Row="3" Grid.ColumnSpan="2" Foreground="White" BorderBrush="#00707070" FontWeight="Light" Grid.RowSpan="2" Height="100" Width="390" />
         <Button x:Name="bntSaveImage" Content="Save Image" Background="#33000000" Margin="342,17,52,146" FontSize="50" Click="bntSaveImage_Click" RenderTransformOrigin="2.369,0.433" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Foreground="White" BorderBrush="#00707070" FontWeight="Light" Grid.RowSpan="2" Height="100" Width="390" />
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="-76,0,0,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" Grid.ColumnSpan="2" MouseDown="prev_page">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="-65,0,0,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" Grid.ColumnSpan="2" MouseDown="prev_page">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image x:Name="image1" Grid.Column="4" Height="100" Margin="68,0,-68,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page">
+        <Image x:Name="image1" Grid.Column="4" Height="100" Margin="0,0,-65,10" Grid.Row="4" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page" HorizontalAlignment="Right">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>

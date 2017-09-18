@@ -41,24 +41,6 @@ namespace TechApp
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            SignUpPage Apt1 = new SignUpPage(this, _visitor);
-            Apt1.Show();
-            
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            TsAndCs TS = new TsAndCs();
-            TS.Show();
-
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
             SignUpPage Apt1 = new SignUpPage(this, _visitor);
@@ -70,25 +52,7 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            TsAndCs TS = new TsAndCs();
-            TS.Show();
-
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
-        private void prev_page_2(object sender, MouseButtonEventArgs e)
-        {
-            SignUpPage SUP = new SignUpPage(this, _visitor);
-            SUP.Show();
-
-            // Hide the MainWindow until later
-            this.Close();
-        }
-
-        private void image1_2_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            SignUpPage Apt1 = new SignUpPage(this, _visitor);
+            TsAndCs Apt1 = new TsAndCs();
             Apt1.Show();
 
             // Hide the MainWindow until later
@@ -96,3 +60,4 @@ namespace TechApp
         }
     }
 }
+

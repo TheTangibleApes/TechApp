@@ -91,5 +91,22 @@ namespace TechApp
             // Hide the MainWindow until later
             this.Close();
         }
+
+        private void FNText(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if ((e.Key < Key.A) || (e.Key > Key.Z))
+                e.Handled = true;
+        }
+
+        private void LNText(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if ((e.Key < Key.A) || (e.Key > Key.Z))
+                e.Handled = true;
+        }
+
+        private void Phone_No(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            
+        }
     }
 }

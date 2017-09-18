@@ -10,7 +10,24 @@
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid MouseDown="prev_page">
-        <ListBox x:Name="listBox" Height="452" Margin="10,10,0,0" Width="1252" Background="#CC3A3A3A" Foreground="White" SelectionChanged="listBox_SelectionChanged" BorderBrush="#00ABADB3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox" Height="452" Margin="10,10,0,0" Width="1252" Background="#CC3A3A3A" Foreground="White" SelectionChanged="listBox_SelectionChanged" BorderBrush="#00ABADB3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" VerticalAlignment="Top">
+            <ListBoxItem Content="Health and Safety" FontSize="35" Height="50"/>
+            <ListBoxItem Content="&#xA;All practical steps have been taken to identify and control hazards on the premises. The Trainer and management&#xA; will review and clarify any health and safety issues concerning students.&#xA;&#xA;Emergency routines&#xA;In the event of an emergency:&#xA;&#xA;Medical - if you identify that a medical emergency
+exists:&#xA;- Immediately inform the Trainer or another staff
+member.&#xA;- Techtorium staff will assess the condition and 
+call 111 for further emergency assistance.&#xA;&#xA;Fire - if you discover a fire:&#xA;- Raise the alarm.&#xA;-Evacuate the building and assemble at the 
+designated assembly point for the building.&#xA;- Do not re-enter the building unless instructed to
+enter the building.&#xA;&#xA;Check the fire safety procedure on the all in each
+room beside the door Earthquake&#xA;- Shelter under desk or chair.&#xA;
+- When shaking has stopped check yourself and 
+others for injuries.&#xA;
+- Evacuate by the closest safe exist and assemble
+at the designated assembly point for the building.
+Ensure you&#xA; are away from buildings and falling
+debris.&#xA;
+- Do as staff direct you." FontSize="24" Height="396"/>
+        
+        </ListBox>
         <CheckBox x:Name="checkBox" Content="Yes" HorizontalAlignment="Center" Margin="508,0,664,101" VerticalAlignment="Bottom" FontSize="36" Width="100" Foreground="#FF00FF2E" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
@@ -26,16 +43,8 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
         </Label>
-        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,-74,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page">
-            <Image.Effect>
-                <DropShadowEffect/>
-            </Image.Effect>
-        </Image>
-        <Image x:Name="image1_2" HorizontalAlignment="Left" Height="100" Margin="-86,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page_2">
-            <Image.Effect>
-                <DropShadowEffect/>
-            </Image.Effect>
-        </Image>
+        <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,-65,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page"/>
+        <Image x:Name="image1_2" HorizontalAlignment="Left" Height="100" Margin="-65,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page_2"/>
 
     </Grid>
 </Window>
