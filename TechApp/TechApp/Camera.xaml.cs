@@ -73,7 +73,7 @@ namespace TechApp
 
         private void bntSaveImage_Click(object sender, RoutedEventArgs e)
         {
-            _visitor.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
+            _visitor.visitorImage = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
         }
 
         private void Return(object sender, RoutedEventArgs e)

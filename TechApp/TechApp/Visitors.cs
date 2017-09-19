@@ -16,7 +16,8 @@ namespace TechApp{
         string lastname;
         string phonenumber;
         string emailaddress;
-        public JpegBitmapEncoder image;
+        public JpegBitmapEncoder visitorImage;
+        public JpegBitmapEncoder signatureImage;
         DateTime appointmenttime;
         int staffid;
         string company;
@@ -179,38 +180,32 @@ namespace TechApp{
 
 
 
-        private byte[] ConvertImageToByteArray()
+        private bool ConvertImageToByteArray(JpegBitmapEncoder ImagetoConvert, out byte[] TheArray)
         {
-            byte[] Ret;
-            using (MemoryStream ms = new MemoryStream())
+            //Make sure that we have an image before trying to 'serialize' it
+            if (ImagetoConvert != null)
             {
-                image.Save(ms);
-                Ret = ms.ToArray();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    ImagetoConvert.Save(ms);
+                    TheArray = ms.ToArray();
+                    return true;
+                }
             }
-            return Ret;
+            else
+            {
+                TheArray = null;
+            }
+            return false;
         }
 
-        private byte[] ConvertSignatureImageToByteArray()
-        {
-            byte[] Ret;
-            using (MemoryStream ms = new MemoryStream())
-            {
-                image.Save(ms);
-                Ret = ms.ToArray();
-            }
-            return Ret;
-        }
 
-        //private string ByteArrayToString(byte[] bytearray)
-        //{
-        //    string querystatement = BitConverter.ToString(bytearray);
-        //    querystatement = BitConverter.ToString(bytearray).Replace("-", "");
-        //    //for (int i = 0; i < bytearray.Length; i++)
-        //    //{
-        //    //    querystatement = querystatement + bytearray[i];
-        //    //}
-        //    return querystatement;
-        //}
+
+        private Boolean SubmitToFile()
+        {
+            //todo
+            return true;
+        }
 
         public Boolean SubmitToDatabase()
         {
@@ -218,47 +213,52 @@ namespace TechApp{
             //ByteArrayToString(ConvertImageToByteArray());
             //return true;
 
-            bool result;
+            bool result = false;
             MySqlConnection con = new MySqlConnection(connectionString);
             MySqlCommand cmd;
             try
             {
-                byte[] SignatureImageData = ConvertSignatureImageToByteArray();
-                byte[] ImageData = ConvertImageToByteArray();
-                string CmdString = "INSERT INTO tangible.tbltechvisitors(firstName, lastName, phoneNumber, emailAddress, appointmentTime, teacherID, image, company) VALUES(@FirstName, @LastName, @PhoneNumber, @EmailAddress, @AppointmentTime, @TeacherID, @Image, @Company)";
-                cmd = new MySqlCommand(CmdString, con);
+                //byte[] SignatureImageData = ConvertSignatureImageToByteArray();
+                byte[] VisitorImgData;
+                byte[] SignatureImgData;
 
-                cmd.Parameters.Add("@FirstName", MySqlDbType.VarChar, 50);
-                cmd.Parameters.Add("@LastName", MySqlDbType.VarChar, 50);
-                cmd.Parameters.Add("@PhoneNumber", MySqlDbType.VarChar, 50);
-                cmd.Parameters.Add("@EmailAddress", MySqlDbType.VarChar, 100);
-                cmd.Parameters.Add("@AppointmentTime", MySqlDbType.DateTime);
-                cmd.Parameters.Add("@TeacherID", MySqlDbType.Int16);
-                cmd.Parameters.Add("@Image", MySqlDbType.Blob);
-                cmd.Parameters.Add("@SignatureImage", MySqlDbType.Blob);
-                cmd.Parameters.Add("@Company", MySqlDbType.VarChar, 100);
-
-                cmd.Parameters["@FirstName"].Value = firstname;
-                cmd.Parameters["@LastName"].Value = lastname;
-                cmd.Parameters["@PhoneNumber"].Value = phonenumber;
-                cmd.Parameters["@EmailAddress"].Value = emailaddress;
-                cmd.Parameters["@AppointmentTime"].Value = appointmenttime;
-                cmd.Parameters["@TeacherID"].Value = staffid;
-                cmd.Parameters["@Image"].Value = ImageData;
-                cmd.Parameters["@SignatureImage"].Value = SignatureImageData;
-                cmd.Parameters["@Company"].Value = company;
-
-                con.Open();
-                int RowsAffected = cmd.ExecuteNonQuery();
-                if (RowsAffected > 0)
+                if (ConvertImageToByteArray(visitorImage, out VisitorImgData) &&
+                    ConvertImageToByteArray(signatureImage, out SignatureImgData))
                 {
-                    result = true;
-                }                
-                else
-                {
-                    result = false;
-                }
-                con.Close();
+
+                    //Build up the SQL
+                    string CmdString = "INSERT INTO tangible.tbltechvisitors(firstName, lastName, phoneNumber, emailAddress, appointmentTime, teacherID, image, company) VALUES(@FirstName, @LastName, @PhoneNumber, @EmailAddress, @AppointmentTime, @TeacherID, @Image, @Company)";
+                    cmd = new MySqlCommand(CmdString, con);
+
+                    cmd.Parameters.Add("@FirstName", MySqlDbType.VarChar, 50);
+                    cmd.Parameters.Add("@LastName", MySqlDbType.VarChar, 50);
+                    cmd.Parameters.Add("@PhoneNumber", MySqlDbType.VarChar, 50);
+                    cmd.Parameters.Add("@EmailAddress", MySqlDbType.VarChar, 100);
+                    cmd.Parameters.Add("@AppointmentTime", MySqlDbType.DateTime);
+                    cmd.Parameters.Add("@TeacherID", MySqlDbType.Int16);
+                    cmd.Parameters.Add("@Image", MySqlDbType.Blob);
+                    //cmd.Parameters.Add("@SignatureImage", MySqlDbType.Blob);
+                    cmd.Parameters.Add("@Company", MySqlDbType.VarChar, 100);
+
+                    cmd.Parameters["@FirstName"].Value = firstname;
+                    cmd.Parameters["@LastName"].Value = lastname;
+                    cmd.Parameters["@PhoneNumber"].Value = phonenumber;
+                    cmd.Parameters["@EmailAddress"].Value = emailaddress;
+                    cmd.Parameters["@AppointmentTime"].Value = appointmenttime;
+                    cmd.Parameters["@TeacherID"].Value = staffid;
+                    cmd.Parameters["@Image"].Value = VisitorImgData;
+                    //cmd.Parameters["@SignatureImage"].Value = SignatureImgData;
+                    cmd.Parameters["@Company"].Value = company;
+
+                    con.Open();
+                    int RowsAffected = cmd.ExecuteNonQuery();
+                    if (RowsAffected > 0)
+                    {
+                        result = true;
+                    }
+                    
+                    con.Close();
+                }//if                
             }
             catch (Exception e)
             {
@@ -271,6 +271,14 @@ namespace TechApp{
                     con.Close();
                 }
             }
+
+            //If, for whatever reason, the data save did not work. Dump it to 
+            //  the file system for the agent to pick up
+            if (result != true)
+            {
+                result = SubmitToFile();
+            }
+
             return result;
         }
 
