@@ -19,7 +19,6 @@
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </TextBlock.Effect>
         </TextBlock>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="61,198,-157,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
         <Image x:Name="image1" HorizontalAlignment="Center" Height="100" Margin="419,395,457,194" VerticalAlignment="Center" Width="400" Source="button-next.png" MouseDown="next_page">
             <Image.Effect>
                 <DropShadowEffect/>

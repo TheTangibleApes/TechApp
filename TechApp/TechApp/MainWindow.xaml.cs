@@ -21,26 +21,24 @@ using System.Runtime.InteropServices;
 
 namespace TechApp
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Visitors TheSingleVisitor;
+
         public MainWindow()
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-            WindowStyle = WindowStyle.None;
+            WindowStyle = WindowStyle.None;             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
-            System.Windows.MessageBox.Show("Signuppage move");
 
-            // Hide the MainWindow until later
-            this.Hide();
         }
 
         private void Close(object sender, RoutedEventArgs e)
@@ -50,7 +48,7 @@ namespace TechApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Camera CameraSystem = new Camera();
+            Camera CameraSystem = new Camera(TheSingleVisitor);
             CameraSystem.Show();
 
             // Hide the MainWindow until later
@@ -59,17 +57,14 @@ namespace TechApp
 
         private void Clicked(object sender, TouchEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
-            Apt1.Show();
 
-            // Hide the MainWindow until later
-            this.Hide();
         }
 
         private void Tapped(object sender, MouseButtonEventArgs e)
         {
-            SignUpPage Apt1 = new SignUpPage();
+            SignUpPage Apt1 = new SignUpPage(this, TheSingleVisitor);
             Apt1.Show();
+            //System.Windows.MessageBox.Show("Signuppage move");
 
             // Hide the MainWindow until later
             this.Hide();
@@ -78,6 +73,26 @@ namespace TechApp
         private void Test(object sender, RoutedEventArgs e)
         {
             Process.Start("osk.exe");
+        }
+
+        private void Grid_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            //CReate the instance of 
+            if (TheSingleVisitor == null)
+            {
+                TheSingleVisitor = new Visitors();
+            }
+            else
+            {
+                TheSingleVisitor.Dispose();
+                TheSingleVisitor = null;
+                TheSingleVisitor = new Visitors();
+            }
         }
     }
 }

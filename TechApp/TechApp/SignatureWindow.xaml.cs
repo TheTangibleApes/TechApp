@@ -19,11 +19,13 @@ namespace TechApp
     /// </summary>
     public partial class SignatureWindow : Window
     {
-        public SignatureWindow()
+        Visitors _visitor;
+        public SignatureWindow(Visitors SignatureVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = SignatureVisitor;
         }
         Point downPoint;
 
@@ -62,7 +64,7 @@ namespace TechApp
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
-            CompleteWindow CW = new CompleteWindow();
+            CompleteWindow CW = new CompleteWindow(_visitor);
             CW.Show();
 
             // Hide the MainWindow until later
@@ -245,7 +247,7 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Camera Camera = new Camera();
+            Camera Camera = new Camera(_visitor);
             Camera.Show();
 
             // Hide the MainWindow until later
@@ -254,7 +256,7 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            Camera Camera = new Camera();
+            Camera Camera = new Camera(_visitor);
             Camera.Show();
 
             // Hide the MainWindow until later
@@ -263,7 +265,7 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            CompleteWindow CW = new CompleteWindow();
+            CompleteWindow CW = new CompleteWindow(_visitor);
             CW.Show();
 
             // Hide the MainWindow until later

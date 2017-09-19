@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace TechApp
 {
@@ -19,12 +20,14 @@ namespace TechApp
     /// </summary>
     public partial class Camera : Window
     {
+        Visitors _visitor;
         WebCam webcam;
-        public Camera()
+        public Camera(Visitors CameraVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = CameraVisitor;
         }
 
         private void mainWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
@@ -34,7 +37,7 @@ namespace TechApp
             webcam = new WebCam();         
             if (webcam == null)
             {
-                SignatureWindow Signature = new SignatureWindow();
+                SignatureWindow Signature = new SignatureWindow(_visitor);
                 Signature.Show();
 
                 // Hide the MainWindow until later
@@ -65,26 +68,17 @@ namespace TechApp
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(SourceImage));
             encoder.QualityLevel = 100;
-
-
-            Visitors AA = new Visitors();
-            //AA.ConvertImageToByteArray(encoder, Jpeg)
             return encoder;
         }
 
         private void bntSaveImage_Click(object sender, RoutedEventArgs e)
         {
-            Visitors AA = new Visitors();
-
-            AA.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
-
-            AA.SubmitImageToDatabase();
-
+            _visitor.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
         }
 
         private void Return(object sender, RoutedEventArgs e)
         {
-            SignatureWindow Signature = new SignatureWindow();
+            SignatureWindow Signature = new SignatureWindow(_visitor);
             Signature.Show();
 
             // Hide the MainWindow until later
@@ -93,7 +87,7 @@ namespace TechApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            TsAndCs TandC = new TsAndCs();
+            TsAndCs TandC = new TsAndCs(_visitor);
             TandC.Show();
 
             // Hide the MainWindow until later
@@ -102,7 +96,7 @@ namespace TechApp
 
         private void prev_page(object sender, MouseButtonEventArgs e)
         {
-            TsAndCs TandC = new TsAndCs();
+            TsAndCs TandC = new TsAndCs(_visitor);
             TandC.Show();
 
             // Hide the MainWindow until later
@@ -111,7 +105,7 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            SignatureWindow Signature = new SignatureWindow();
+            SignatureWindow Signature = new SignatureWindow(_visitor);
             Signature.Show();
 
             // Hide the MainWindow until later

@@ -19,16 +19,20 @@ namespace TechApp
     /// </summary>
     public partial class TsAndCs : Window
     {
-        public TsAndCs()
+        private Visitors _visitor;
+        public TsAndCs(Visitors TsAndCsVisitor)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+            _visitor = TsAndCsVisitor;
         }
+
+        public Boolean acceptedTerms = false;
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            SetUpAppointment Appt2 = new SetUpAppointment();
+            SetUpAppointment Appt2 = new SetUpAppointment(_visitor);
             Appt2.Show();
 
             // Hide the MainWindow until later
@@ -37,7 +41,7 @@ namespace TechApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Camera CameraSystem = new Camera();
+            Camera CameraSystem = new Camera(_visitor);
             CameraSystem.Show();
 
             // Hide the MainWindow until later
@@ -61,20 +65,39 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
-            Camera CameraSystem = new Camera();
-            CameraSystem.Show();
+            if(acceptedTerms == true)
+            {
+                Camera CameraSystem = new Camera(_visitor);
+                CameraSystem.Show();
+
+                // Hide the MainWindow until later
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("You must agree to the terms and conditions");
+            }
+        }
+
+        private void prev_page_2(object sender, MouseButtonEventArgs e)
+        {
+            SetUpAppointment Appt2 = new SetUpAppointment(_visitor);
+            Appt2.Show();
 
             // Hide the MainWindow until later
             this.Close();
         }
 
-        private void prev_page_2(object sender, MouseButtonEventArgs e)
+        private void No_Checked(object sender, RoutedEventArgs e)
         {
-            SetUpAppointment Appt2 = new SetUpAppointment();
-            Appt2.Show();
+            YesCheck.IsChecked = false;
+            acceptedTerms = false;
+        }
 
-            // Hide the MainWindow until later
-            this.Close();
+        private void Yes_Checked(object sender, RoutedEventArgs e)
+        {
+            NoCheck.IsChecked = false;
+            acceptedTerms = true;
         }
     }
 }
