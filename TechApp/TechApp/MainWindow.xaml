@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280" Icon="Tap-icon.png">
+        Title="MainWindow" Height="720" Width="1280" Icon="Tap-icon.png" Activated="Window_Activated">
     <Window.Background>
         <ImageBrush ImageSource="Wallpaper4K.png"/>
     </Window.Background>
-    <Grid>
+    <Grid Margin="0,64,0,0">
         <Image HorizontalAlignment="Center" Height="100" Margin="435,361,437,228" VerticalAlignment="Center" Width="400" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped"/>
         <Label Content="TAP TO START:" HorizontalAlignment="Center" Margin="396,255,400,333" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="72" Height="101" Width="476" FontWeight="ExtraLight" Background="{x:Null}">
             <Label.Foreground>

@@ -60,21 +60,12 @@ namespace TechApp
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(SourceImage));
             encoder.QualityLevel = 100;
-
-
-            Visitors AA = new Visitors();
-            //AA.ConvertImageToByteArray(encoder, Jpeg)
             return encoder;
         }
 
         private void bntSaveImage_Click(object sender, RoutedEventArgs e)
         {
-            Visitors AA = new Visitors();
-
-            AA.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
-
-            //AA.SubmitImageToDatabase();
-
+            _visitor.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
         }
 
         private void Return(object sender, RoutedEventArgs e)

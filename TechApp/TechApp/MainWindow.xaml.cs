@@ -77,6 +77,11 @@ namespace TechApp
 
         private void Grid_GotFocus(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
             //CReate the instance of 
             if (TheSingleVisitor == null)
             {
