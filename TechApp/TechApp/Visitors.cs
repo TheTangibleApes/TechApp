@@ -190,6 +190,17 @@ namespace TechApp{
             return Ret;
         }
 
+        private byte[] ConvertSignatureImageToByteArray()
+        {
+            byte[] Ret;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms);
+                Ret = ms.ToArray();
+            }
+            return Ret;
+        }
+
         //private string ByteArrayToString(byte[] bytearray)
         //{
         //    string querystatement = BitConverter.ToString(bytearray);
@@ -212,6 +223,7 @@ namespace TechApp{
             MySqlCommand cmd;
             try
             {
+                byte[] SignatureImageData = ConvertSignatureImageToByteArray();
                 byte[] ImageData = ConvertImageToByteArray();
                 string CmdString = "INSERT INTO tangible.tbltechvisitors(firstName, lastName, phoneNumber, emailAddress, appointmentTime, teacherID, image, company) VALUES(@FirstName, @LastName, @PhoneNumber, @EmailAddress, @AppointmentTime, @TeacherID, @Image, @Company)";
                 cmd = new MySqlCommand(CmdString, con);
@@ -223,6 +235,7 @@ namespace TechApp{
                 cmd.Parameters.Add("@AppointmentTime", MySqlDbType.DateTime);
                 cmd.Parameters.Add("@TeacherID", MySqlDbType.Int16);
                 cmd.Parameters.Add("@Image", MySqlDbType.Blob);
+                cmd.Parameters.Add("@SignatureImage", MySqlDbType.Blob);
                 cmd.Parameters.Add("@Company", MySqlDbType.VarChar, 100);
 
                 cmd.Parameters["@FirstName"].Value = firstname;
@@ -232,6 +245,7 @@ namespace TechApp{
                 cmd.Parameters["@AppointmentTime"].Value = appointmenttime;
                 cmd.Parameters["@TeacherID"].Value = staffid;
                 cmd.Parameters["@Image"].Value = ImageData;
+                cmd.Parameters["@SignatureImage"].Value = SignatureImageData;
                 cmd.Parameters["@Company"].Value = company;
 
                 con.Open();
