@@ -10,7 +10,17 @@
         <ImageBrush ImageSource="Wallpaper4K.png"/>
     </Window.Background>
     <Grid>
-        <Image HorizontalAlignment="Center" Height="100" Margin="435,361,437,228" VerticalAlignment="Center" Width="400" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped"/>
+        <Rectangle Height="446" Margin="-40,159,-38,84" Stroke="#00000000" VerticalAlignment="Center" Width="1350">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#00000000" Offset="0"/>
+                    <GradientStop Color="#BF1BD692" Offset="0.217"/>
+                    <GradientStop Offset="1" Color="#00000000"/>
+                    <GradientStop Color="#BF00FF3A" Offset="0.783"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image HorizontalAlignment="Center" Height="116" Margin="371,361,373,212" VerticalAlignment="Center" Width="528" Source="button-next.png" TouchDown="Clicked" MouseLeftButtonDown="Tapped"/>
         <Label Content="TAP TO START:" HorizontalAlignment="Center" Margin="396,255,400,333" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="72" Height="101" Width="476" FontWeight="ExtraLight" Background="{x:Null}">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
