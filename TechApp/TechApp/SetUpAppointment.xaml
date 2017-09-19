@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid Margin="2,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-        <Label x:Name="label1" Content="Make an appointment with one of the following:" HorizontalAlignment="Center" Margin="237,184,258,447" VerticalAlignment="Center" FontSize="36" Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
+        <Label x:Name="label1" Content="Who are you here to see?" HorizontalAlignment="Center" Margin="416,194,438,437" VerticalAlignment="Center" FontSize="36" Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
             </Label.Effect>
