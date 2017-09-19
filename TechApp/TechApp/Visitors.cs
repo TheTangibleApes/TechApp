@@ -222,8 +222,8 @@ namespace TechApp{
                 byte[] VisitorImgData;
                 byte[] SignatureImgData;
 
-                if (ConvertImageToByteArray(visitorImage, out VisitorImgData) &&
-                    ConvertImageToByteArray(signatureImage, out SignatureImgData))
+                if (ConvertImageToByteArray(visitorImage, out VisitorImgData)) //&&
+                    //ConvertImageToByteArray(signatureImage, out SignatureImgData))
                 {
 
                     //Build up the SQL
