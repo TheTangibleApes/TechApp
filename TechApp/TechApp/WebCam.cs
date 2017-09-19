@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WebCam_Capture;
 
+using System.Windows;
+
 namespace TechApp
 {
     class WebCam
@@ -29,8 +31,13 @@ namespace TechApp
 
         public void Start()
         {
+
+            MessageBox.Show("A");
+            
             webcam.TimeToCapture_milliseconds = FrameNumber;
-            webcam.Start(0);
+            MessageBox.Show("Ab");
+            webcam.Start(1);
+            MessageBox.Show("b");
         }
 
         public void Stop()

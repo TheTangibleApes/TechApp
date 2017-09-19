@@ -54,6 +54,11 @@ namespace TechApp
 
         private void next_screen(object sender, MouseButtonEventArgs e)
         {
+            _visitor.SetFirstName(textBox.Text);
+            _visitor.SetLastName(textBox1.Text);
+            _visitor.SetPhoneNumber(textBox2.Text);
+            _visitor.SetEmailAddress(textBox3.Text);
+            _visitor.SetCompany(textBox4.Text);
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
                 // Message box

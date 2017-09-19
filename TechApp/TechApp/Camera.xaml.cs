@@ -33,8 +33,8 @@ namespace TechApp
         private void mainWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
-            webcam = new WebCam();
-            webcam.InitializeWebCam(ref imgVideo);
+            MessageBox.Show("0");
+            webcam = new WebCam();         
             if (webcam == null)
             {
                 SignatureWindow Signature = new SignatureWindow(_visitor);
@@ -43,7 +43,14 @@ namespace TechApp
                 // Hide the MainWindow until later
                 this.Close();
             }
-            else webcam.Start();
+            else
+            {
+                MessageBox.Show("1");
+                webcam.InitializeWebCam(ref imgVideo);
+                MessageBox.Show("2");
+                webcam.Start();
+                MessageBox.Show("3");
+            }
         }
 
         private void bntContinue_Click(object sender, RoutedEventArgs e)
@@ -61,21 +68,12 @@ namespace TechApp
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(SourceImage));
             encoder.QualityLevel = 100;
-
-
-            Visitors AA = new Visitors();
-            //AA.ConvertImageToByteArray(encoder, Jpeg)
             return encoder;
         }
 
         private void bntSaveImage_Click(object sender, RoutedEventArgs e)
         {
-            Visitors AA = new Visitors();
-
-            AA.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
-
-            //AA.SubmitImageToDatabase();
-
+            _visitor.image = GetCameraImageAsJPEG((BitmapSource)imgVideo.Source);
         }
 
         private void Return(object sender, RoutedEventArgs e)

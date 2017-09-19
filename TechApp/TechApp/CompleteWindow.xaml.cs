@@ -29,7 +29,13 @@ namespace TechApp
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+                if (_visitor.SubmitToDatabase() == false)
+                {
+                MessageBox.Show("Your information could not be submitted.");
+                }
+
+
             MainWindow HomeScreen = new MainWindow();
             HomeScreen.Show();
 
@@ -48,6 +54,12 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
+            if (_visitor.SubmitToDatabase() == false)
+            {
+                MessageBox.Show("Your information could not be submitted.");
+                return;
+            }
+
             MainWindow HomeScreen = new MainWindow();
             HomeScreen.Show();
 

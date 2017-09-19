@@ -35,6 +35,7 @@ namespace TechApp
             MySqlCommand cmd = new MySqlCommand(Sql, conn);
             MySqlDataReader DR = cmd.ExecuteReader();
 
+            comboBox.Items.Add("");
             while (DR.Read())
             {
                 comboBox.Items.Add(DR[0]);
@@ -52,12 +53,14 @@ namespace TechApp
 
         private void next_page(object sender, MouseButtonEventArgs e)
         {
+            _visitor.SetStaffID(comboBox.SelectedIndex);
             TsAndCs Apt1 = new TsAndCs(_visitor);
             Apt1.Show();
 
             // Hide the MainWindow until later
             this.Close();
         }
+
     }
 }
 
