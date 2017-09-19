@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="Wallpaper4K.png"/>
     </Window.Background>
     <Grid>
-        <Rectangle Height="446" Margin="-40,159,-38,84" Stroke="#00000000" VerticalAlignment="Center" Width="1350">
+        <Rectangle Height="446" Margin="-536,159,-243,84" Stroke="#00000000">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#00000000" Offset="0"/>
