@@ -33,7 +33,7 @@ namespace TechApp
         private void mainWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
-            MessageBox.Show("0");
+            //MessageBox.Show("0");
             webcam = new WebCam();         
             if (webcam == null)
             {
@@ -45,11 +45,11 @@ namespace TechApp
             }
             else
             {
-                MessageBox.Show("1");
+                //MessageBox.Show("1");
                 webcam.InitializeWebCam(ref imgVideo);
-                MessageBox.Show("2");
+               // MessageBox.Show("2");
                 webcam.Start();
-                MessageBox.Show("3");
+               // MessageBox.Show("3");
             }
         }
 
