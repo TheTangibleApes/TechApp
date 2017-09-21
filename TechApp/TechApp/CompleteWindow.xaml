@@ -14,16 +14,6 @@
             <ColumnDefinition Width="319*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle Height="446" Margin="-412,173,-359,70" Stroke="#00000000" Grid.ColumnSpan="2">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#00000000" Offset="0"/>
-                    <GradientStop Color="#BF1BD692" Offset="0.217"/>
-                    <GradientStop Offset="1" Color="#00000000"/>
-                    <GradientStop Color="#BF00FF3A" Offset="0.783"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
 
         <TextBlock x:Name="TextBox1" HorizontalAlignment="Center" Height="112" Margin="151,283,151,294" TextWrapping="Wrap" Text="THANK YOU FOR COMPLETING" VerticalAlignment="Center" Width="974" FontSize="72" Foreground="White" FontWeight="ExtraLight">
             <TextBlock.Effect>
