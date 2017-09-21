@@ -45,11 +45,11 @@ namespace TechApp
             }
             else
             {
-                //MessageBox.Show("1");
+               //MessageBox.Show("1");
                 webcam.InitializeWebCam(ref imgVideo);
-               // MessageBox.Show("2");
+               //MessageBox.Show("2");
                 webcam.Start();
-               // MessageBox.Show("3");
+               //MessageBox.Show("3");
             }
         }
 
