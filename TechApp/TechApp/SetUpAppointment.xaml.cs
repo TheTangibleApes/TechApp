@@ -35,7 +35,6 @@ namespace TechApp
             MySqlCommand cmd = new MySqlCommand(Sql, conn);
             MySqlDataReader DR = cmd.ExecuteReader();
 
-            comboBox.Items.Add("");
             while (DR.Read())
             {
                 comboBox.Items.Add(DR[0]);
