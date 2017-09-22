@@ -23,7 +23,6 @@
             </Label.Effect>
         </Label>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="548,605,0,-16" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="130,143,0,0" VerticalAlignment="Top" Width="75" Click="Test2"/>
     </Grid>
 </Window>
     
