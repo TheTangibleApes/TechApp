@@ -94,5 +94,14 @@ namespace TechApp
                 TheSingleVisitor = new Visitors();
             }
         }
+
+        private void Test2(object sender, RoutedEventArgs e)
+        {
+            SignatureWindow CameraSystem = new SignatureWindow(TheSingleVisitor);
+            CameraSystem.Show();
+
+            // Hide the MainWindow until later
+            this.Hide();
+        }
     }
 }

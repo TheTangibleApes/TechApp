@@ -10,7 +10,15 @@
         <ImageBrush ImageSource="NewBG.png"/>
     </Window.Background>
     <Grid>
-        <Canvas x:Name="canvasSignature" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" VerticalAlignment="Top" Width="1252"/>
+        <Canvas Background="White" Width="auto" Height="auto" Name="canvas1" MouseDown="canvas1_MouseDown" MouseMove="canvas1_MouseMove" MouseUp="canvas1_MouseUp">
+
+            <Line X1="0" X2="400" Y1="0" Y2="400" Stroke="Blue" Height="262" Width="278" StrokeThickness="5"></Line>
+
+            <Line X1="0" X2="200" Y1="0" Y2="400" Stroke="Red" Height="262" Width="278" StrokeThickness="5"></Line>
+
+            <Line X1="0" X2="400" Y1="0" Y2="200" Stroke="Green" Height="262" Width="278" StrokeThickness="5"></Line>
+
+        </Canvas>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="-65,0,0,10" VerticalAlignment="Bottom" Width="400" Source="button-previous.png" MouseDown="prev_page"/>
         <Image x:Name="image1" HorizontalAlignment="Right" Height="100" Margin="0,0,-65,10" VerticalAlignment="Bottom" Width="400" Source="button-next.png" MouseDown="next_page"/>
 

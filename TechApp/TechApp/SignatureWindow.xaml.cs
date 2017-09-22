@@ -43,10 +43,15 @@ namespace TechApp
 
         private double zoomFactor = 1.0;
 
-        private void canvasSignature_MouseDown(object sender, MouseButtonEventArgs e)
+
+
+
+
+        private void canvas1_MouseDown(object sender, MouseButtonEventArgs e)
 
         {
-            if (!this.canvasSignature.IsMouseCaptured)
+
+            if (!this.canvas1.IsMouseCaptured)
 
             {
 
@@ -56,23 +61,22 @@ namespace TechApp
 
                 downPoint = new Point();
 
-                downPoint = e.GetPosition(this.canvasSignature);
+                downPoint = e.GetPosition(this.canvas1);
 
             }
+
+
+
         }
 
 
-        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            CompleteWindow CW = new CompleteWindow(_visitor);
-            CW.Show();
 
-            // Hide the MainWindow until later
-            this.Close();
-        }
+        private void canvas1_MouseMove(object sender, MouseEventArgs e)
 
-        private void canvasSignature_MouseMove(object sender, MouseEventArgs e)
         {
+
+
+
             if (isMouseDown == true)
 
             {
@@ -91,13 +95,13 @@ namespace TechApp
 
                     rubberBand.StrokeDashArray = new DoubleCollection(new double[] { 4, 2 });
 
-                    canvasSignature.Children.Add(rubberBand);
+                    canvas1.Children.Add(rubberBand);
 
                 }
 
 
 
-                currentPoint = e.GetPosition(this.canvasSignature);
+                currentPoint = e.GetPosition(this.canvas1);
 
 
 
@@ -120,34 +124,46 @@ namespace TechApp
 
 
             }
+
         }
 
-        private void canvasSignature_MouseUp(object sender, MouseButtonEventArgs e)
+        private void canvas1_MouseUp(object sender, MouseButtonEventArgs e)
+
         {
-            if (!this.canvasSignature.IsMouseCaptured)
+
+
+
+            if (!this.canvas1.IsMouseCaptured)
 
             {
+
+
 
                 isMouseDown = false;
 
                 upPoint = new Point();
 
-                upPoint = e.GetPosition(this.canvasSignature);
+                upPoint = e.GetPosition(this.canvas1);
 
                 CanvasToJpg(downPoint, upPoint);
 
                 RectangleToJpg();
 
+
+
             }
+
         }
+
+
 
         private void CanvasToJpg(Point pt1, Point pt2)
 
         {
 
-            RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvasSignature.ActualWidth, (int)canvasSignature.ActualHeight, 96, 96, PixelFormats.Pbgra32);
+            RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvas1.ActualWidth, (int)canvas1.ActualHeight, 96, 96, PixelFormats.Pbgra32);
 
-            bmp.Render(canvasSignature);
+            bmp.Render(canvas1);
 
             string Extension = System.IO.Path.GetExtension(savePath).ToLower();
 
@@ -244,6 +260,7 @@ namespace TechApp
             }
 
         }
+
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
